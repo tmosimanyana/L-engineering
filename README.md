@@ -11,7 +11,6 @@ project/
 ├── services.html
 ├── projects.html
 ├── contact.html
-├── QUICK-START.md
 └── assets/
     ├── css/
     │   └── styles.css
@@ -20,44 +19,20 @@ project/
     │   ├── favicon.png
     │   ├── og-image.jpg
     │   ├── hero.jpg
-    │   ├── services-hero.jpg
-    │   └── project images...
+    │   └── services-hero.jpg
+    ├── images/
+    │   └── (project photos used on projects.html)
     └── js/
         └── main.js
 ```
 
-## Running the Website (Local)
-From the project folder, run:
-
+## Run locally
 ```bash
 python -m http.server 5000
 ```
-
-Then open:
-http://localhost:5000
-
-## Features
-- Pure HTML, CSS, and JavaScript (no backend)
-- Fully responsive design
-- WhatsApp click-to-chat integration
-- Project gallery with filters and lightbox
-- SEO-optimized meta tags
-- Social media preview support
-
-## Deployment
-
-### GitHub Pages
-1. Go to Repository Settings
-2. Open Pages
-3. Source: Deploy from branch
-4. Branch: main
-5. Folder: /(root)
-
-### Netlify
-- Build command: none
-- Publish directory: /
+Open: http://localhost:5000
 
 ## Notes
-- Keep only one JavaScript file at `assets/js/main.js`
-- All images must be inside `assets/img/`
-- Use relative paths for all assets
+- No inline CSS is used; all styles are in `assets/css/styles.css`.
+- Hero images must be placed in `assets/img/` with the filenames above.
+- The Projects gallery images referenced in `projects.html` use `assets/images/` (update paths if your folder differs).

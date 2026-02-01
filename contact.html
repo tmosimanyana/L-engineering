@@ -1,627 +1,166 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact | Lush Engineering</title>
-    <meta name="description" content="Contact Lush Engineering in Francistown, Botswana. Call, email, or WhatsApp for a quote. Visit our office at Plot 8555, Kgaphamadi." />
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <link rel="canonical" href="https://www.lushengineering.co.bw/contact.html" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-        .contact-info-box {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .contact-info-box h4 {
-            margin: 0 0 10px;
-            color: #007bff;
-        }
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            margin: 12px 0;
-            gap: 10px;
-        }
-        .contact-info-item .icon {
-            font-size: 20px;
-            margin-top: 2px;
-        }
-        .map-container {
-            margin-top: 30px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-        }
-        .hours-table {
-            width: 100%;
-            margin-top: 10px;
-        }
-        .hours-table td {
-            padding: 8px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .hours-table td:first-child {
-            font-weight: 600;
-            width: 40%;
-        }
-        .hours-table tr:last-child td {
-            border-bottom: none;
-        }
-        .status-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-        .status-open {
-            background: #d4edda;
-            color: #155724;
-        }
-        .status-closed {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        .form-option-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .form-option-btn {
-            flex: 1;
-            min-width: 140px;
-            padding: 12px 20px;
-            border: 2px solid #e0e0e0;
-            background: white;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: center;
-            font-weight: 600;
-        }
-        .form-option-btn:hover {
-            border-color: #007bff;
-            background: #f0f7ff;
-        }
-        .form-option-btn.active {
-            border-color: #007bff;
-            background: #007bff;
-            color: white;
-        }
-        .form-option-btn .icon {
-            display: block;
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        .email-form {
-            display: none;
-        }
-        .email-form.active {
-            display: block;
-        }
-        .whatsapp-form.active {
-            display: block;
-        }
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
-            display: none;
-        }
-        .success-message.show {
-            display: block;
-        }
-    </style>
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Lush Engineering Proprietary Limited",
-      "image": "https://www.lushengineering.co.bw/assets/img/logo.svg",
-      "@id": "https://www.lushengineering.co.bw",
-      "url": "https://www.lushengineering.co.bw",
-      "telephone": "+26773108995",
-      "email": "lushengineering1@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Plot 8555, Kgaphamadi",
-        "addressLocality": "Francistown",
-        "postalCode": "F6",
-        "addressCountry": "BW"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -21.1691,
-        "longitude": 27.5114
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "17:00"
-      },
-      "sameAs": [
-        "https://wa.me/26773108995"
-      ]
-    }
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Lush Engineering</title>
+  <meta name="description" content="Contact Lush Engineering in Francistown, Botswana. Call, email, or WhatsApp for a quote." />
+
+  <link rel="icon" href="assets/img/favicon.png" />
+  <meta property="og:title" content="Contact | Lush Engineering" />
+  <meta property="og:description" content="Contact Lush Engineering in Francistown, Botswana. Call, email, or WhatsApp for a quote." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div>📍 Francistown, Botswana</div>
-                <div style="display:flex; gap:14px; flex-wrap:wrap;">
-                    <a data-call href="tel:+26773108995">📞 +267 73108995</a>
-                    <a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a>
-                </div>
-            </div>
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div>📍 Francistown, Botswana</div>
+        <div class="topbar-right">
+          <a data-call href="tel:+26773108995">📞 +267 73108995</a>
+          <a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html">
+          <div class="logo"><img src="assets/img/logo.png" alt="Lush Engineering logo" /></div>
+          <div>
+            <div class="name">Lush Engineering</div>
+            <div class="tag">Electrical & Construction Engineering</div>
+          </div>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul>
+            <li><a id="nav-home" href="index.html">Home</a></li>
+            <li><a id="nav-about" href="about.html">About</a></li>
+            <li><a id="nav-services" href="services.html">Services</a></li>
+            <li><a id="nav-projects" href="projects.html">Projects</a></li>
+            <li><a id="nav-contact" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-primary" data-call href="tel:+26773108995">Call Us</a>
+          <a class="btn btn-light" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
+          <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
+        </div>
+      </div>
     </div>
 
-    <header>
-        <div class="container">
-            <div class="nav">
-                <a class="brand" href="index.html">
-                    <div class="logo">
-                        <img src="assets/img/logo.svg" alt="Lush Engineering logo" loading="lazy" />
-                    </div>
-                    <div>
-                        <div class="name">Lush Engineering</div>
-                        <div class="tag">Electrical & Construction Engineering</div>
-                    </div>
-                </a>
-
-                <nav aria-label="Primary">
-                    <ul>
-                        <li><a id="nav-home" href="index.html">Home</a></li>
-                        <li><a id="nav-about" href="about.html">About</a></li>
-                        <li><a id="nav-services" href="services.html">Services</a></li>
-                        <li><a id="nav-projects" href="projects.html">Projects</a></li>
-                        <li><a id="nav-contact" href="contact.html" aria-current="page">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="nav-cta">
-                    <a class="btn btn-primary" data-call href="tel:+26773108995">Call Us</a>
-                    <a class="btn btn-light" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
-                    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="mobile-nav" id="mobileNav">
-            <a id="nav-home-m" href="index.html">Home</a>
-            <a id="nav-about-m" href="about.html">About</a>
-            <a id="nav-services-m" href="services.html">Services</a>
-            <a id="nav-projects-m" href="projects.html">Projects</a>
-            <a id="nav-contact-m" href="contact.html">Contact</a>
-        </div>
-    </header>
-
-    <main class="hero" id="main-content" style="padding:54px 0 28px;">
-        <div class="container">
-            <span class="chip">Contact</span>
-            <h1 style="margin-top:12px;">Get in Touch</h1>
-            <p style="max-width:72ch;">
-                Ready to discuss your project? Choose your preferred way to reach us below. We typically respond within 24 hours.
-            </p>
-        </div>
-    </main>
-
-    <section>
-        <div class="container">
-            <div class="two-col">
-                <div class="box">
-                    <h2 style="margin:0;">Contact Information</h2>
-                    
-                    <div class="contact-info-box">
-                        <h4>📍 Office Location</h4>
-                        <div class="contact-info-item">
-                            <div>
-                                Plot 8555, Kgaphamadi<br />
-                                Francistown, Botswana<br />
-                                Private Bag F6
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-box">
-                        <h4>📞 Phone Numbers</h4>
-                        <div class="contact-info-item">
-                            <div>
-                                <a data-call href="tel:+26773108995" style="font-weight: 600;">+267 73108995</a> (Primary)<br />
-                                <a href="tel:+26774689754">+267 74689754</a> (Alternative)
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-box">
-                        <h4>✉️ Email</h4>
-                        <div class="contact-info-item">
-                            <div>
-                                <a href="mailto:lushengineering1@gmail.com">lushengineering1@gmail.com</a><br />
-                                <span style="font-size: 14px; color: #666;">We respond within 24 hours</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-box">
-                        <h4>⏰ Business Hours</h4>
-                        <div id="statusBadge" class="status-badge"></div>
-                        <table class="hours-table">
-                            <tr>
-                                <td>Monday - Friday</td>
-                                <td>8:00 AM - 5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Saturday</td>
-                                <td>Closed</td>
-                            </tr>
-                            <tr>
-                                <td>Sunday</td>
-                                <td>Closed</td>
-                            </tr>
-                            <tr>
-                                <td>Public Holidays</td>
-                                <td>Closed</td>
-                            </tr>
-                        </table>
-                        <p style="font-size: 14px; color: #666; margin-top: 10px;">
-                            <strong>Note:</strong> Emergency services available outside regular hours
-                        </p>
-                    </div>
-
-                    <div style="margin-top: 20px;">
-                        <a class="btn btn-primary" data-call href="tel:+26773108995">📞 Call Now</a>
-                        <a class="btn btn-light" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">💬 WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <h2 style="margin:0;">Send Us a Message</h2>
-                    <p class="help" style="margin-top:8px;">Choose how you'd like to contact us:</p>
-
-                    <div class="form-option-buttons">
-                        <button class="form-option-btn active" data-form="whatsapp">
-                            <span class="icon">💬</span>
-                            <span>WhatsApp</span>
-                        </button>
-                        <button class="form-option-btn" data-form="email">
-                            <span class="icon">✉️</span>
-                            <span>Email</span>
-                        </button>
-                    </div>
-
-                    <div id="formAlert" class="alert" aria-live="polite"></div>
-                    <div id="successMessage" class="success-message"></div>
-
-                    <!-- WhatsApp Form -->
-                    <form id="whatsappForm" class="form whatsapp-form active" novalidate>
-                        <p class="help" style="margin-bottom: 15px;">Fill out the form below and we'll open WhatsApp with your message ready to send. Fields marked * are required.</p>
-                        
-                        <input class="input" id="wa-name" name="name" type="text" placeholder="Full Name *" required aria-label="Full Name" />
-                        <input class="input" id="wa-phone" name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" />
-                        <input class="input" id="wa-email" name="email" type="email" placeholder="Email Address" aria-label="Email Address" />
-                        <textarea class="input" id="wa-message" name="message" placeholder="Your Message *" required aria-label="Your Message" rows="5"></textarea>
-
-                        <button class="btn btn-primary" type="submit">Continue to WhatsApp 💬</button>
-                        <div class="help">Your message will open in WhatsApp where you can review before sending.</div>
-                    </form>
-
-                    <!-- Email Form -->
-                    <form id="emailForm" class="form email-form" novalidate>
-                        <p class="help" style="margin-bottom: 15px;">Send us an email directly. We'll respond within 24 hours. Fields marked * are required.</p>
-                        
-                        <input class="input" id="email-name" name="name" type="text" placeholder="Full Name *" required aria-label="Full Name" />
-                        <input class="input" id="email-phone" name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" />
-                        <input class="input" id="email-email" name="email" type="email" placeholder="Email Address *" required aria-label="Email Address" />
-                        <textarea class="input" id="email-message" name="message" placeholder="Your Message *" required aria-label="Your Message" rows="5"></textarea>
-
-                        <button class="btn btn-primary" type="submit">Send Email ✉️</button>
-                        <div class="help">Your email client will open with the message pre-filled.</div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Map Section -->
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.8!2d27.5114!3d-21.1691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEwJzA4LjgiUyAyN8KwMzAnNDEuMCJF!5e0!3m2!1sen!2sbw!4v1234567890"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Lush Engineering Office Location in Francistown">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="band">
-        <div class="container">
-            <div class="section-title">
-                <div>
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Quick answers to common questions</p>
-                </div>
-            </div>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>How quickly will I get a response?</h3>
-                    <p>We typically respond to all inquiries within 24 hours during business days. For urgent matters, call us directly.</p>
-                </div>
-                <div class="card">
-                    <h3>Do you provide free quotes?</h3>
-                    <p>Yes! Initial consultations and quotes are completely free with no obligation.</p>
-                </div>
-                <div class="card">
-                    <h3>What areas do you serve?</h3>
-                    <p>We're based in Francistown and serve clients throughout Botswana for all engineering projects.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="faq.html" class="btn btn-ghost">View All FAQs</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div style="display:flex; gap:10px; align-items:center;">
-                        <div class="logo" aria-hidden="true">
-                            <img src="assets/img/logo.svg" alt="Lush Engineering logo" loading="lazy" />
-                        </div>
-                        <div>
-                            <div style="font-weight:900;">Lush Engineering</div>
-                            <div style="font-size:13px; opacity:.9;">Electrical & Construction Engineering</div>
-                        </div>
-                    </div>
-                    <p style="margin:12px 0 0; max-width:60ch;">
-                        Professional engineering services delivered with quality workmanship, safety compliance, and reliable timelines.
-                    </p>
-                    <div class="small">© <span id="year"></span> Lush Engineering Proprietary Limited. All rights reserved.</div>
-                </div>
-
-                <div>
-                    <h4 style="margin:0 0 10px;">Quick Links</h4>
-                    <p style="margin:0;"><a href="index.html">Home</a></p>
-                    <p style="margin:8px 0 0;"><a href="about.html">About</a></p>
-                    <p style="margin:8px 0 0;"><a href="services.html">Services</a></p>
-                    <p style="margin:8px 0 0;"><a href="projects.html">Projects</a></p>
-                    <p style="margin:8px 0 0;"><a href="faq.html">FAQ</a></p>
-                </div>
-
-                <div>
-                    <h4 style="margin:0 0 10px;">Contact</h4>
-                    <p style="margin:0;">📍 Francistown, Botswana</p>
-                    <p style="margin:8px 0 0;"><a data-call href="tel:+26773108995">📞 +267 73108995</a></p>
-                    <p style="margin:8px 0 0;"><a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a></p>
-                    <p style="margin:8px 0 0;"><a data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">💬 WhatsApp</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="float" aria-label="Quick actions">
-        <a class="fab whatsapp" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener" aria-label="WhatsApp"><span>💬</span></a>
-        <a class="fab call" data-call href="tel:+26773108995" aria-label="Call"><span>📞</span></a>
+    <div class="mobile-nav" id="mobileNav">
+      <a id="nav-home-m" href="index.html">Home</a>
+      <a id="nav-about-m" href="about.html">About</a>
+      <a id="nav-services-m" href="services.html">Services</a>
+      <a id="nav-projects-m" href="projects.html">Projects</a>
+      <a id="nav-contact-m" href="contact.html">Contact</a>
     </div>
+  </header>
 
-    <script src="assets/js/main.js"></script>
-    <script>
-        (function () {
-            "use strict";
-            
-            const WA_NUMBER = "26773108995";
-            const EMAIL_ADDRESS = "lushengineering1@gmail.com";
-            
-            // Business hours status
-            function updateBusinessStatus() {
-                const now = new Date();
-                const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
-                const hour = now.getHours();
-                const badge = document.getElementById('statusBadge');
-                
-                if (badge) {
-                    // Monday (1) to Friday (5), 8 AM to 5 PM
-                    if (day >= 1 && day <= 5 && hour >= 8 && hour < 17) {
-                        badge.textContent = 'Open Now';
-                        badge.className = 'status-badge status-open';
-                    } else {
-                        badge.textContent = 'Closed';
-                        badge.className = 'status-badge status-closed';
-                    }
-                }
-            }
-            
-            updateBusinessStatus();
-            
-            // Form switching
-            const formButtons = document.querySelectorAll('.form-option-btn');
-            const whatsappForm = document.getElementById('whatsappForm');
-            const emailForm = document.getElementById('emailForm');
-            
-            formButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const formType = this.getAttribute('data-form');
-                    
-                    // Update button states
-                    formButtons.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Show/hide forms
-                    if (formType === 'whatsapp') {
-                        whatsappForm.classList.add('active');
-                        emailForm.classList.remove('active');
-                    } else {
-                        emailForm.classList.add('active');
-                        whatsappForm.classList.remove('active');
-                    }
-                    
-                    // Clear messages
-                    hideAlert();
-                    hideSuccess();
-                });
-            });
-            
-            // Alert functions
-            const alertBox = document.getElementById("formAlert");
-            const successBox = document.getElementById("successMessage");
-            
-            function showAlert(msg, type = 'error') {
-                if (alertBox) {
-                    alertBox.textContent = msg;
-                    alertBox.className = 'alert show';
-                    alertBox.style.background = type === 'error' ? '#f8d7da' : '#fff3cd';
-                    alertBox.style.color = type === 'error' ? '#721c24' : '#856404';
-                    alertBox.style.border = type === 'error' ? '1px solid #f5c6cb' : '1px solid #ffeaa7';
-                    alertBox.style.padding = '12px';
-                    alertBox.style.borderRadius = '6px';
-                    alertBox.style.marginBottom = '15px';
-                }
-            }
+  <main class="hero hero-compact">
+    <div class="container">
+      <span class="chip">Contact</span>
+      <h1>Get in Touch</h1>
+      <p class="max-72ch">
+        Call, email, or send your request using the form below. The form will open WhatsApp to send the message instantly.
+      </p>
+    </div>
+  </main>
 
-            function hideAlert() {
-                if (alertBox) {
-                    alertBox.textContent = "";
-                    alertBox.classList.remove("show");
-                    alertBox.style.display = "none";
-                }
-            }
-            
-            function showSuccess(msg) {
-                if (successBox) {
-                    successBox.textContent = msg;
-                    successBox.classList.add('show');
-                }
-            }
-            
-            function hideSuccess() {
-                if (successBox) {
-                    successBox.textContent = "";
-                    successBox.classList.remove('show');
-                }
-            }
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <div class="box">
+          <h2 class="m-0">Contact Details</h2>
+          <p class="mt-10">
+            📍 Plot 8555, Kgaphamadi, Francistown, Botswana<br />
+            📦 Private Bag F6
+          </p>
+          <p class="mt-10">
+            📞 <a data-call href="tel:+26773108995">+267 73108995</a> / <a href="tel:+26774689754">+267 74689754</a><br />
+            ✉️ <a href="mailto:lushengineering1@gmail.com">lushengineering1@gmail.com</a><br />
+            💬 <a data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
+          </p>
 
-            // WhatsApp Form Handler
-            if (whatsappForm) {
-                whatsappForm.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    hideAlert();
-                    hideSuccess();
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-call href="tel:+26773108995">📞 Call Now</a>
+            <a class="btn btn-light" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">💬 WhatsApp</a>
+          </div>
 
-                    const name = (document.getElementById("wa-name")?.value || "").trim();
-                    const phone = (document.getElementById("wa-phone")?.value || "").trim();
-                    const email = (document.getElementById("wa-email")?.value || "").trim();
-                    const message = (document.getElementById("wa-message")?.value || "").trim();
+          <p class="help mt-18">
+            Tip: Replace this with a Google Maps embed later if the client wants it.
+          </p>
+        </div>
 
-                    if (!name || !message) {
-                        showAlert("Please fill in your Full Name and Message.", 'error');
-                        return;
-                    }
+        <div class="box">
+          <h2 class="m-0">Send a Message</h2>
+          <p class="help mt-10">Fields marked * are required.</p>
 
-                    const lines = [
-                        "Hello Lush Engineering,",
-                        "",
-                        `Name: ${name}`,
-                        phone ? `Phone: ${phone}` : null,
-                        email ? `Email: ${email}` : null,
-                        "",
-                        "Message:",
-                        message
-                    ].filter(Boolean);
+          <div id="formAlert" class="alert"></div>
 
-                    const text = encodeURIComponent(lines.join("\n"));
-                    const url = `https://wa.me/${WA_NUMBER}?text=${text}`;
+          <form id="contactForm" class="form" novalidate>
+            <input class="input" id="name" name="name" type="text" placeholder="Full Name *" required />
+            <input class="input" id="phone" name="phone" type="tel" placeholder="Phone Number" />
+            <input class="input" id="email" name="email" type="email" placeholder="Email Address" />
+            <textarea class="input" id="message" name="message" placeholder="Your Message *" required></textarea>
 
-                    // Open WhatsApp
-                    const opened = window.open(url, "_blank", "noopener");
-                    
-                    if (opened) {
-                        showSuccess("✓ WhatsApp opened! Please review and send your message.");
-                        // Clear form after 2 seconds
-                        setTimeout(() => {
-                            whatsappForm.reset();
-                            hideSuccess();
-                        }, 3000);
-                    } else {
-                        showAlert("Please allow pop-ups to open WhatsApp, or click the button again.", 'warning');
-                    }
-                });
-            }
-            
-            // Email Form Handler
-            if (emailForm) {
-                emailForm.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    hideAlert();
-                    hideSuccess();
+            <button class="btn btn-primary" type="submit">Send via WhatsApp</button>
+            <div class="help">No backend needed. This opens WhatsApp with your message pre-filled.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="logo" aria-hidden="true"><img src="assets/img/logo.png" alt="Lush Engineering logo" /></div>
+            <div>
+              <div class="footer-title">Lush Engineering</div>
+              <div class="footer-tag">Electrical & Construction Engineering</div>
+            </div>
+          </div>
+          <p class="footer-note">
+            Professional engineering services delivered with quality workmanship, safety compliance, and reliable timelines.
+          </p>
+          <div class="small">© <span id="year"></span> Lush Engineering Proprietary Limited. All rights reserved.</div>
+        </div>
 
-                    const name = (document.getElementById("email-name")?.value || "").trim();
-                    const phone = (document.getElementById("email-phone")?.value || "").trim();
-                    const email = (document.getElementById("email-email")?.value || "").trim();
-                    const message = (document.getElementById("email-message")?.value || "").trim();
+        <div>
+          <h4 class="m-0">Quick Links</h4>
+          <p class="mt-10 mb-0"><a href="index.html">Home</a></p>
+          <p class="mt-10 mb-0"><a href="about.html">About</a></p>
+          <p class="mt-10 mb-0"><a href="services.html">Services</a></p>
+          <p class="mt-10 mb-0"><a href="projects.html">Projects</a></p>
+          <p class="mt-10 mb-0"><a href="contact.html">Contact</a></p>
+        </div>
 
-                    if (!name || !email || !message) {
-                        showAlert("Please fill in your Full Name, Email Address, and Message.", 'error');
-                        return;
-                    }
-                    
-                    // Validate email format
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        showAlert("Please enter a valid email address.", 'error');
-                        return;
-                    }
+        <div>
+          <h4 class="m-0">Contact</h4>
+          <p class="mt-10 mb-0">📍 Francistown, Botswana</p>
+          <p class="mt-10 mb-0"><a data-call href="tel:+26773108995">📞 +267 73108995</a></p>
+          <p class="mt-10 mb-0"><a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a></p>
+          <p class="mt-10 mb-0"><a data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">💬 WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-                    const subject = encodeURIComponent(`Inquiry from ${name}`);
-                    const body = encodeURIComponent(
-                        `Name: ${name}\n` +
-                        (phone ? `Phone: ${phone}\n` : '') +
-                        `Email: ${email}\n\n` +
-                        `Message:\n${message}`
-                    );
+  <div class="float" aria-label="Quick actions">
+    <a class="fab whatsapp" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener" aria-label="WhatsApp"><span>💬</span></a>
+    <a class="fab call" data-call href="tel:+26773108995" aria-label="Call"><span>📞</span></a>
+  </div>
 
-                    const mailtoUrl = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`;
-                    
-                    // Open email client
-                    window.location.href = mailtoUrl;
-                    
-                    showSuccess("✓ Your email client should open now. If it doesn't, please email us directly at " + EMAIL_ADDRESS);
-                    
-                    // Clear form after 3 seconds
-                    setTimeout(() => {
-                        emailForm.reset();
-                    }, 3000);
-                });
-            }
-        })();
-    </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
