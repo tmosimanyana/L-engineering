@@ -1,38 +1,61 @@
 # Lush Engineering Website
 
-## Overview
-A static website for Lush Engineering, an electrical and construction engineering company based in Francistown, Botswana.
+Static website (HTML/CSS/JS) for Lush Engineering — Francistown, Botswana.
 
-## Project Structure
+## Folder structure
+
 ```
-project/
+L-engineering/
 ├── index.html
 ├── about.html
 ├── services.html
 ├── projects.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 └── assets/
     ├── css/
     │   └── styles.css
-    ├── img/
-    │   ├── logo.png
-    │   ├── favicon.png
-    │   ├── og-image.jpg
-    │   ├── hero.jpg
-    │   └── services-hero.jpg
-    ├── images/
-    │   └── (project photos used on projects.html)
-    └── js/
-        └── main.js
+    ├── js/
+    │   └── main.js
+    └── img/
+        ├── logo.svg
+        ├── favicon.png
+        ├── og-image.jpg
+        ├── hero.jpg
+        ├── services-hero.jpg
+        ├── page1_img1.jpeg ...
+        └── projects/ (optional)
 ```
 
+## Important (images)
+All images must be inside **`assets/img/`**.
+
+### Required brand files
+- `assets/img/logo.svg`
+- `assets/img/favicon.png`
+- `assets/img/og-image.jpg`
+
+### Hero images
+- Homepage: `assets/img/hero.jpg`
+- Services page: `assets/img/services-hero.jpg`
+
 ## Run locally
+
+From the project folder:
+
 ```bash
 python -m http.server 5000
 ```
-Open: http://localhost:5000
 
-## Notes
-- No inline CSS is used; all styles are in `assets/css/styles.css`.
-- Hero images must be placed in `assets/img/` with the filenames above.
-- The Projects gallery images referenced in `projects.html` use `assets/images/` (update paths if your folder differs).
+Then open `http://localhost:5000`
+
+## Deploy (GitHub Pages)
+
+1. Push to GitHub
+2. Repository → **Settings** → **Pages**
+3. Source: **Deploy from a branch**
+4. Branch: **main** / folder: **/(root)**
+
+Your site will be available at:
+`https://tmosimanyana.github.io/L-engineering/`
