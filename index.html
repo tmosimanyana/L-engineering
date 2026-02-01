@@ -10,18 +10,70 @@
 
     <!-- Brand assets -->
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.lushengineering.co.bw/" />
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content="Lush Engineering | Electrical & Construction Engineering" />
     <meta property="og:description"
         content="Professional electrical and construction engineering services in Francistown, Botswana." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/img/og-image.jpg" />
+    <meta property="og:url" content="https://www.lushengineering.co.bw/" />
+    <meta property="og:image" content="https://www.lushengineering.co.bw/assets/img/og-image.jpg" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lush Engineering | Electrical & Construction Engineering" />
+    <meta name="twitter:description" content="Professional electrical and construction engineering services in Francistown, Botswana." />
+    <meta name="twitter:image" content="https://www.lushengineering.co.bw/assets/img/og-image.jpg" />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Lush Engineering Proprietary Limited",
+      "image": "https://www.lushengineering.co.bw/assets/img/logo.svg",
+      "@id": "https://www.lushengineering.co.bw",
+      "url": "https://www.lushengineering.co.bw",
+      "telephone": "+26773108995",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot 8555, Kgaphamadi",
+        "addressLocality": "Francistown",
+        "postalCode": "F6",
+        "addressCountry": "BW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -21.1691,
+        "longitude": 27.5114
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://wa.me/26773108995"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- TOP BAR -->
     <div class="topbar">
@@ -30,7 +82,7 @@
                 <div>📍 Francistown, Botswana</div>
                 <div style="display:flex; gap:14px; flex-wrap:wrap;">
                     <a data-call href="tel:+26773108995">📞 +267 73108995</a>
-                    <a href="/cdn-cgi/l/email-protection#7f130a0c171a111816111a1a0d1611184e3f18121e1613511c1012">✉️ <span class="__cf_email__" data-cfemail="69051c1a010c070e00070c0c1b00070e58290e04080005470a0604">[email&#160;protected]</span></a>
+                    <a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -42,7 +94,7 @@
             <div class="nav">
                 <a class="brand" href="index.html">
                     <div class="logo">
-                        <img src="assets/img/logo.svg" alt="Lush Engineering logo" loading="lazy" />
+                        <img src="assets/img/logo.svg" alt="Lush Engineering logo" loading="lazy" width="50" height="50" />
                     </div>
                     <div>
                         <div class="name">Lush Engineering</div>
@@ -52,7 +104,7 @@
 
                 <nav aria-label="Primary">
                     <ul>
-                        <li><a id="nav-home" href="index.html">Home</a></li>
+                        <li><a id="nav-home" href="index.html" aria-current="page">Home</a></li>
                         <li><a id="nav-about" href="about.html">About</a></li>
                         <li><a id="nav-services" href="services.html">Services</a></li>
                         <li><a id="nav-projects" href="projects.html">Projects</a></li>
@@ -81,7 +133,7 @@
     </header>
 
     <!-- HERO -->
-    <main class="hero">
+    <main class="hero" id="main-content">
         <div class="container">
             <div class="hero-grid">
                 <div>
@@ -100,7 +152,7 @@
 
                 <div>
                     <div class="hero-card">
-                        <h3>Why Choose Lush Engineering?</h3>
+                        <h2>Why Choose Lush Engineering?</h2>
                         <ul>
                             <li>Licensed & experienced team</li>
                             <li>Quality-focused workmanship</li>
@@ -278,7 +330,7 @@
                 <div>
                     <div style="display:flex; gap:10px; align-items:center;">
                         <div class="logo" aria-hidden="true">
-                            <img src="assets/img/logo.svg" alt="Lush Engineering logo" loading="lazy" />
+                            <img src="assets/img/logo.svg" alt="Lush Engineering logo" loading="lazy" width="50" height="50" />
                         </div>
                         <div>
                             <div style="font-weight:900;">Lush Engineering</div>
@@ -306,8 +358,7 @@
                     <h4 style="margin:0 0 10px;">Contact</h4>
                     <p style="margin:0;">📍 Francistown, Botswana</p>
                     <p style="margin:8px 0 0;"><a data-call href="tel:+26773108995">📞 +267 73108995</a></p>
-                    <p style="margin:8px 0 0;"><a href="/cdn-cgi/l/email-protection#2f435a5c474a414846414a4a5d4641481e6f48424e4643014c4042">✉️
-                            <span class="__cf_email__" data-cfemail="7a160f09121f141d13141f1f0813141d4b3a1d171b131654191517">[email&#160;protected]</span></a></p>
+                    <p style="margin:8px 0 0;"><a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a></p>
                     <p style="margin:8px 0 0;"><a data-wa href="https://wa.me/26773108995" target="_blank"
                             rel="noopener">💬 WhatsApp</a></p>
                 </div>
@@ -317,4 +368,10 @@
 
     <!-- Floating Action Buttons -->
     <div class="float" aria-label="Quick actions">
-        <a class="fab whatsapp" data-wa
+        <a class="fab whatsapp" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener" aria-label="WhatsApp"><span>💬</span></a>
+        <a class="fab call" data-call href="tel:+26773108995" aria-label="Call"><span>📞</span></a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
