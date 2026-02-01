@@ -33,4 +33,4 @@ The website is served using Python's built-in HTTP server on port 5000.
 - SEO-ready with proper meta tags
 
 ## Deployment
-Configured for static deployment on Replit.
+Configured for static deployment on netlify.
