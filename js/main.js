@@ -1,7 +1,7 @@
-console.log('Lush Engineering site loaded');
+console.log('Lush Engineering site loaded'); console.log('Lush Engineering site loaded');
 
 // ===== NAVIGATION =====
-(function() {
+(function () {
     "use strict";
 
     // Set current year in footer
@@ -15,7 +15,7 @@ console.log('Lush Engineering site loaded');
     const mobileNav = document.getElementById('mobileNav');
 
     if (menuBtn && mobileNav) {
-        menuBtn.addEventListener('click', function() {
+        menuBtn.addEventListener('click', function () {
             const isOpen = mobileNav.classList.toggle('open');
             menuBtn.setAttribute('aria-expanded', isOpen);
             menuBtn.textContent = isOpen ? '✕' : '☰';
@@ -24,7 +24,7 @@ console.log('Lush Engineering site loaded');
 
     // Set active navigation link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
+
     // Desktop nav
     const navLinks = {
         'index.html': 'nav-home',
@@ -46,7 +46,7 @@ console.log('Lush Engineering site loaded');
     if (navLinks[currentPage]) {
         const activeLink = document.getElementById(navLinks[currentPage]);
         if (activeLink) activeLink.classList.add('active');
-        
+
         const activeMobileLink = document.getElementById(mobileNavLinks[currentPage]);
         if (activeMobileLink) activeMobileLink.classList.add('active');
     }
@@ -54,12 +54,12 @@ console.log('Lush Engineering site loaded');
 })();
 
 // ===== ANALYTICS HELPERS =====
-(function() {
+(function () {
     "use strict";
 
     // Track phone clicks
-    document.querySelectorAll('[data-call]').forEach(function(el) {
-        el.addEventListener('click', function() {
+    document.querySelectorAll('[data-call]').forEach(function (el) {
+        el.addEventListener('click', function () {
             console.log('Phone call initiated:', el.href);
             // Add your analytics tracking here, e.g.:
             // gtag('event', 'phone_call', { phone_number: el.href });
@@ -67,8 +67,8 @@ console.log('Lush Engineering site loaded');
     });
 
     // Track WhatsApp clicks
-    document.querySelectorAll('[data-wa]').forEach(function(el) {
-        el.addEventListener('click', function() {
+    document.querySelectorAll('[data-wa]').forEach(function (el) {
+        el.addEventListener('click', function () {
             console.log('WhatsApp link clicked:', el.href);
             // Add your analytics tracking here, e.g.:
             // gtag('event', 'whatsapp_click', { link: el.href });
@@ -78,7 +78,7 @@ console.log('Lush Engineering site loaded');
 })();
 
 // ===== PROJECT GALLERY (for projects.html) =====
-(function() {
+(function () {
     "use strict";
 
     const gallery = document.querySelector('.gallery');
@@ -91,18 +91,18 @@ console.log('Lush Engineering site loaded');
     const closeBtn = document.getElementById('closeBtn');
 
     // Filter functionality
-    filterBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
+    filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
             const filter = btn.getAttribute('data-filter');
-            
+
             // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             // Filter items
-            galleryItems.forEach(function(item) {
+            galleryItems.forEach(function (item) {
                 const category = item.getAttribute('data-category');
-                
+
                 if (filter === 'all' || category === filter) {
                     item.classList.remove('is-hidden');
                 } else {
@@ -114,8 +114,8 @@ console.log('Lush Engineering site loaded');
 
     // Lightbox functionality
     if (lightbox && lightboxImg) {
-        galleryItems.forEach(function(item) {
-            item.addEventListener('click', function() {
+        galleryItems.forEach(function (item) {
+            item.addEventListener('click', function () {
                 const img = item.querySelector('img');
                 if (img) {
                     lightboxImg.src = img.src;
@@ -136,14 +136,14 @@ console.log('Lush Engineering site loaded');
             closeBtn.addEventListener('click', closeLightbox);
         }
 
-        lightbox.addEventListener('click', function(e) {
+        lightbox.addEventListener('click', function (e) {
             if (e.target === lightbox) {
                 closeLightbox();
             }
         });
 
         // Close on ESC key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && lightbox.classList.contains('open')) {
                 closeLightbox();
             }
@@ -153,11 +153,11 @@ console.log('Lush Engineering site loaded');
 })();
 
 // ===== SMOOTH SCROLL (optional enhancement) =====
-(function() {
+(function () {
     "use strict";
 
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 e.preventDefault();

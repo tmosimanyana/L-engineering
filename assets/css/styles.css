@@ -321,6 +321,14 @@ nav a.active {
     position: relative;
 }
 
+
+/* ===== Services Page Hero (set your image at assets/img/services-hero.jpg) ===== */
+.hero.hero-services {
+    background:
+        linear-gradient(rgba(11, 18, 32, 0.78), rgba(11, 18, 32, 0.78)),
+        url("../img/services-hero.jpg") center / cover no-repeat;
+}
+
 .hero::after {
     content: "";
     position: absolute;
