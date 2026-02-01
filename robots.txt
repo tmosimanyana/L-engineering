@@ -1,0 +1,7 @@
+# robots.txt for Lush Engineering
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://yourdomain.com/sitemap.xml
