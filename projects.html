@@ -1,225 +1,226 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Projects | Lush Engineering</title>
-    <meta name="description" content="View Lush Engineering project gallery and examples of work across electrical, construction, road works, mechanical, and security systems." />
-    <link rel="canonical" href="https://tmosimanyana.github.io/L-engineering/projects.html" />
+    <meta name="description"
+        content="Browse Lush Engineering project gallery — electrical, construction, road works, mechanical and security system installations across Botswana." />
 
-    <!-- Brand assets -->
     <link rel="icon" href="assets/img/favicon.png" />
-
-    <!-- Open Graph / Social -->
     <meta property="og:title" content="Projects | Lush Engineering" />
-    <meta property="og:description" content="View Lush Engineering project gallery and examples of work across electrical, construction, road works, mechanical, and security systems." />
+    <meta property="og:description"
+        content="Project gallery: electrical, construction, road works, mechanical and security systems." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tmosimanyana.github.io/L-engineering/projects.html" />
-    <meta property="og:image" content="https://tmosimanyana.github.io/L-engineering/assets/img/og-image.jpg" />
+    <meta property="og:image" content="assets/img/og-image.jpg" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Projects | Lush Engineering" />
-    <meta name="twitter:description" content="View Lush Engineering project gallery and examples of work across electrical, construction, road works, mechanical, and security systems." />
-    <meta name="twitter:image" content="https://tmosimanyana.github.io/L-engineering/assets/img/og-image.jpg" />
-
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
-    <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#0b1220" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div>📍 Francistown, Botswana</div>
-                <div class="flex gap-14 flex-wrap">
-                    <a data-call href="tel:+26773108995">📞 +267 73108995</a>
-                    <a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a>
-                </div>
+
+<body class="bg-white text-slate-900">
+    <!-- Topbar -->
+    <div class="bg-slate-950 text-white/90 text-sm">
+        <div class="max-w-6xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+            <div>📍 Francistown, Botswana</div>
+            <div class="flex flex-wrap gap-4">
+                <a class="hover:text-white" href="tel:+26773108995">📞 +267 73108995</a>
+                <a class="hover:text-white" href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a>
             </div>
         </div>
     </div>
-    <header>
-        <div class="container">
-            <div class="nav">
-                <a class="brand" href="index.html">
-                    <div class="logo">
-                        <img src="assets/img/logo.svg" alt="Lush Engineering logo" width="44" height="44" decoding="async" />
-                    </div>
-                    <div>
-                        <div class="name">Lush Engineering</div>
-                        <div class="tag">Electrical & Construction Engineering</div>
-                    </div>
-                </a>
 
-                <nav aria-label="Primary">
-                    <ul>
-                        <li><a id="nav-home" href="index.html">Home</a></li>
-                        <li><a id="nav-about" href="about.html">About</a></li>
-                        <li><a id="nav-services" href="services.html">Services</a></li>
-                        <li><a id="nav-projects" href="projects.html">Projects</a></li>
-                        <li><a id="nav-contact" href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-yellow-400 grid place-items-center overflow-hidden">
+                    <img src="assets/img/logo.svg" alt="Lush Engineering logo" class="w-10 h-10 object-contain" />
+                </span>
+                <span class="leading-tight">
+                    <span class="block font-black">Lush Engineering</span>
+                    <span class="block text-xs text-slate-600 font-semibold">Electrical & Construction
+                        Engineering</span>
+                </span>
+            </a>
 
-                <div class="nav-cta">
-                    <a class="btn btn-primary" data-call href="tel:+26773108995">Call Us</a>
-                    <a class="btn btn-light" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
-                    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
-                </div>
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-6 font-semibold text-slate-700">
+                    <li><a class="hover:text-slate-950" href="index.html">Home</a></li>
+                    <li><a class="hover:text-slate-950" href="about.html">About</a></li>
+                    <li><a class="hover:text-slate-950" href="services.html">Services</a></li>
+                    <li><a class="text-slate-950 underline underline-offset-8" href="projects.html">Projects</a></li>
+                    <li><a class="hover:text-slate-950" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex items-center gap-2">
+                <a class="hidden sm:inline-flex px-4 py-2 rounded-full bg-yellow-400 text-slate-900 font-extrabold hover:brightness-95"
+                    href="tel:+26773108995">Call Us</a>
+                <a class="hidden sm:inline-flex px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50"
+                    href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
+                <button data-menu-btn
+                    class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-200"
+                    aria-expanded="false" aria-label="Open menu">☰</button>
             </div>
         </div>
 
-        <div class="mobile-nav" id="mobileNav">
-            <a id="nav-home-m" href="index.html">Home</a>
-            <a id="nav-about-m" href="about.html">About</a>
-            <a id="nav-services-m" href="services.html">Services</a>
-            <a id="nav-projects-m" href="projects.html">Projects</a>
-            <a id="nav-contact-m" href="contact.html">Contact</a>
+        <div data-menu-panel class="md:hidden hidden border-t border-slate-200 bg-white">
+            <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 font-semibold">
+                <a class="py-2" href="index.html">Home</a>
+                <a class="py-2" href="about.html">About</a>
+                <a class="py-2" href="services.html">Services</a>
+                <a class="py-2" href="projects.html">Projects</a>
+                <a class="py-2" href="contact.html">Contact</a>
+            </div>
         </div>
     </header>
 
-    <main id="main">
-        <section class="hero">
-            <div class="container">
-                <span class="chip">Projects &amp; Gallery</span>
-                <h1>Work Showcase</h1>
-                <p class="max-72ch">Explore examples of our work across electrical installations, construction &amp; civil works, road works, and security systems.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="contact.html">Request a Quote</a>
-                    <a class="btn btn-ghost" href="services.html">View Services</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <div class="section-title">
-                    <div>
-                        <h2>Gallery</h2>
-                        <p class="max-70ch">Click any image to view. Place your project photos inside <strong>assets/img/</strong> (or <strong>assets/img/projects/</strong>) and update filenames below.</p>
-                    </div>
-                </div>
-
-                <div class="filters" aria-label="Gallery filters">
-                    <button class="filter-btn active" data-filter="all" type="button">All</button>
-                    <button class="filter-btn" data-filter="road" type="button">Road</button>
-                    <button class="filter-btn" data-filter="electrical" type="button">Electrical</button>
-                    <button class="filter-btn" data-filter="mechanical" type="button">Mechanical</button>
-                    <button class="filter-btn" data-filter="construction" type="button">Construction</button>
-                    <button class="filter-btn" data-filter="security" type="button">Security</button>
-                </div>
-
-                <div class="gallery" id="gallery">
-                    <a class="g-item" data-cat="road" href="assets/img/page1_img1.jpeg">
-                        <img src="assets/img/page1_img1.jpeg" alt="Road construction and infrastructure works" loading="lazy" decoding="async">
-                        <div class="g-cap">Road &amp; Infrastructure</div>
-                    </a>
-
-                    <a class="g-item" data-cat="road" href="assets/img/page4_img3.jpeg">
-                        <img src="assets/img/page4_img3.jpeg" alt="Road surfacing works" loading="lazy" decoding="async">
-                        <div class="g-cap">Road Works</div>
-                    </a>
-
-                    <a class="g-item" data-cat="road" href="assets/img/page4_img4.jpeg">
-                        <img src="assets/img/page4_img4.jpeg" alt="Drainage and civil infrastructure works" loading="lazy" decoding="async">
-                        <div class="g-cap">Infrastructure</div>
-                    </a>
-
-                    <a class="g-item" data-cat="electrical" href="assets/img/page1_img2.jpeg">
-                        <img src="assets/img/page1_img2.jpeg" alt="Electrical substation and power systems" loading="lazy" decoding="async">
-                        <div class="g-cap">Electrical Engineering</div>
-                    </a>
-
-                    <a class="g-item" data-cat="electrical" href="assets/img/page1_img4.jpeg">
-                        <img src="assets/img/page1_img4.jpeg" alt="Power line electrical installation" loading="lazy" decoding="async">
-                        <div class="g-cap">Electrical Installations</div>
-                    </a>
-
-                    <a class="g-item" data-cat="electrical" href="assets/img/page4_img2.jpeg">
-                        <img src="assets/img/page4_img2.jpeg" alt="Transformer and pole electrical works" loading="lazy" decoding="async">
-                        <div class="g-cap">Electrical Works</div>
-                    </a>
-
-                    <a class="g-item" data-cat="mechanical" href="assets/img/page1_img3.jpeg">
-                        <img src="assets/img/page1_img3.jpeg" alt="Air conditioning and HVAC installation" loading="lazy" decoding="async">
-                        <div class="g-cap">Mechanical / HVAC</div>
-                    </a>
-
-                    <a class="g-item" data-cat="mechanical" href="assets/img/page4_img1.jpeg">
-                        <img src="assets/img/page4_img1.jpeg" alt="HVAC outdoor units installation" loading="lazy" decoding="async">
-                        <div class="g-cap">Air Conditioning</div>
-                    </a>
-
-                    <a class="g-item" data-cat="construction" href="assets/img/page1_img5.jpeg">
-                        <img src="assets/img/page1_img5.jpeg" alt="Building construction works" loading="lazy" decoding="async">
-                        <div class="g-cap">Construction</div>
-                    </a>
-
-                    <a class="g-item" data-cat="construction" href="assets/img/page3_img1.jpeg">
-                        <img src="assets/img/page3_img1.jpeg" alt="Civil construction and masonry works" loading="lazy" decoding="async">
-                        <div class="g-cap">Civil Works</div>
-                    </a>
-
-                    <a class="g-item" data-cat="security" href="assets/img/page2_img1.jpeg">
-                        <img src="assets/img/page2_img1.jpeg" alt="CCTV and security systems installation" loading="lazy" decoding="async">
-                        <div class="g-cap">Security Systems</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <div class="lightbox" id="lightbox" aria-hidden="true">
-            <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
-            <img id="lbImg" alt="Project image preview" />
+    <!-- Hero -->
+    <section class="bg-slate-950 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-200 font-extrabold text-sm">
+                Projects & Gallery
+            </span>
+            <h1 class="mt-4 text-3xl md:text-4xl font-black">Work showcase</h1>
+            <p class="mt-3 text-white/80 max-w-3xl">
+                Browse representative examples of our electrical, construction, road works, mechanical and security
+                projects.
+                Click any image to view.
+            </p>
         </div>
+    </section>
 
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
+    <!-- Gallery + filters -->
+    <section class="py-14">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                    <div class="flex gap-10 items-center">
-                        <div class="logo" aria-hidden="true">
-                            <img src="assets/img/logo.svg" alt="" width="44" height="44" decoding="async" />
-                        </div>
-                        <div>
-                            <div class="fw-900">Lush Engineering</div>
-                            <div class="fs-13 op-90">Electrical & Construction Engineering</div>
-                        </div>
+                    <h2 class="text-2xl font-black">Gallery</h2>
+                    <p class="mt-1 text-slate-600">Tip: replace image filenames with your real images inside
+                        <b>assets/img/</b>.</p>
+                </div>
+                <a class="px-5 py-3 rounded-full bg-slate-950 text-white font-extrabold hover:bg-slate-900"
+                    href="contact.html">Request a Quote</a>
+            </div>
+
+            <!-- Filters -->
+            <div class="mt-6 flex flex-wrap gap-2">
+                <button data-filter="all"
+                    class="px-4 py-2 rounded-full border border-slate-200 font-extrabold bg-yellow-400 text-slate-900">All</button>
+                <button data-filter="road"
+                    class="px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50">Road</button>
+                <button data-filter="electrical"
+                    class="px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50">Electrical</button>
+                <button data-filter="mechanical"
+                    class="px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50">Mechanical</button>
+                <button data-filter="construction"
+                    class="px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50">Construction</button>
+                <button data-filter="security"
+                    class="px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50">Security</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Replace filenames below with your real images -->
+                <a data-lightbox href="assets/img/page1_img1.jpeg" data-cat="road"
+                    class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="assets/img/page1_img1.jpeg" alt="Road & infrastructure works"
+                        class="w-full h-56 object-cover group-hover:scale-[1.02] transition" loading="lazy" />
+                    <div class="p-4 font-extrabold">Road & Infrastructure</div>
+                </a>
+
+                <a data-lightbox href="assets/img/page1_img2.jpeg" data-cat="electrical"
+                    class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="assets/img/page1_img2.jpeg" alt="Electrical engineering works"
+                        class="w-full h-56 object-cover group-hover:scale-[1.02] transition" loading="lazy" />
+                    <div class="p-4 font-extrabold">Electrical Engineering</div>
+                </a>
+
+                <a data-lightbox href="assets/img/page1_img3.jpeg" data-cat="mechanical"
+                    class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="assets/img/page1_img3.jpeg" alt="Mechanical / HVAC installation"
+                        class="w-full h-56 object-cover group-hover:scale-[1.02] transition" loading="lazy" />
+                    <div class="p-4 font-extrabold">Mechanical / HVAC</div>
+                </a>
+
+                <a data-lightbox href="assets/img/page1_img5.jpeg" data-cat="construction"
+                    class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="assets/img/page1_img5.jpeg" alt="Construction and civil works"
+                        class="w-full h-56 object-cover group-hover:scale-[1.02] transition" loading="lazy" />
+                    <div class="p-4 font-extrabold">Construction & Civil</div>
+                </a>
+
+                <a data-lightbox href="assets/img/page2_img1.jpeg" data-cat="security"
+                    class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="assets/img/page2_img1.jpeg" alt="Security systems installation"
+                        class="w-full h-56 object-cover group-hover:scale-[1.02] transition" loading="lazy" />
+                    <div class="p-4 font-extrabold">Security Systems</div>
+                </a>
+
+                <a data-lightbox href="assets/img/page4_img2.jpeg" data-cat="electrical"
+                    class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="assets/img/page4_img2.jpeg" alt="Electrical installations"
+                        class="w-full h-56 object-cover group-hover:scale-[1.02] transition" loading="lazy" />
+                    <div class="p-4 font-extrabold">Electrical Installations</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-[999] p-4">
+        <button id="lbClose" class="absolute top-4 right-4 px-3 py-2 rounded-xl bg-white font-black">✕</button>
+        <div class="w-full h-full grid place-items-center">
+            <img id="lbImg" alt="Preview" class="max-w-[92vw] max-h-[86vh] rounded-2xl border border-white/20" />
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white/85 py-10">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-3">
+                    <span class="w-11 h-11 rounded-xl bg-yellow-400 grid place-items-center overflow-hidden">
+                        <img src="assets/img/logo.svg" alt="Lush Engineering logo" class="w-10 h-10 object-contain" />
+                    </span>
+                    <div>
+                        <div class="font-black text-white">Lush Engineering</div>
+                        <div class="text-sm text-white/70">Electrical & Construction Engineering</div>
                     </div>
-                    <p class="max-60ch mt-12">
-                        Professional engineering services delivered with quality workmanship, safety compliance, and reliable timelines.
-                    </p>
-                    <div class="small">© <span id="year"></span> Lush Engineering Proprietary Limited. All rights reserved.</div>
                 </div>
+                <p class="mt-3 text-white/75 max-w-md">Professional engineering services delivered with quality
+                    workmanship, safety compliance, and reliable timelines.</p>
+                <p class="mt-4 text-sm">© <span id="year"></span> Lush Engineering Proprietary Limited. All rights
+                    reserved.</p>
+            </div>
 
-                <div>
-                    <h4 class="m-0 mb-10">Quick Links</h4>
-                    <p class="m-0"><a href="about.html">About</a></p>
-                    <p class="mt-8"><a href="services.html">Services</a></p>
-                    <p class="mt-8"><a href="projects.html">Projects</a></p>
-                    <p class="mt-8"><a href="contact.html">Contact</a></p>
+            <div>
+                <h4 class="font-extrabold text-white">Quick Links</h4>
+                <div class="mt-3 grid gap-2">
+                    <a class="hover:text-white" href="index.html">Home</a>
+                    <a class="hover:text-white" href="about.html">About</a>
+                    <a class="hover:text-white" href="services.html">Services</a>
+                    <a class="hover:text-white" href="contact.html">Contact</a>
                 </div>
+            </div>
 
-                <div>
-                    <h4 class="m-0 mb-10">Contact</h4>
-                    <p class="m-0">📍 Francistown, Botswana</p>
-                    <p class="mt-8"><a data-call href="tel:+26773108995">📞 +267 73108995</a></p>
-                    <p class="mt-8"><a href="mailto:lushengineering1@gmail.com">✉️ lushengineering1@gmail.com</a></p>
-                    <p class="mt-8"><a data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener">💬 WhatsApp</a></p>
+            <div>
+                <h4 class="font-extrabold text-white">Contact</h4>
+                <div class="mt-3 grid gap-2">
+                    <div>📍 Francistown, Botswana</div>
+                    <a class="hover:text-white" href="tel:+26773108995">📞 +267 73108995</a>
+                    <a class="hover:text-white" href="mailto:lushengineering1@gmail.com">✉️
+                        lushengineering1@gmail.com</a>
+                    <a class="hover:text-white" href="https://wa.me/26773108995" target="_blank" rel="noopener">💬
+                        WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div class="float" aria-label="Quick actions">
-        <a class="fab whatsapp" data-wa href="https://wa.me/26773108995" target="_blank" rel="noopener" aria-label="WhatsApp"><span>💬</span></a>
-        <a class="fab call" data-call href="tel:+26773108995" aria-label="Call"><span>📞</span></a>
-    </div>
-
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
