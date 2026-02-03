@@ -9,9 +9,7 @@ export function VideoHero() {
     const video = videoRef.current;
     if (!video) return;
 
-    const handleLoadedData = () => {
-      setIsVideoLoaded(true);
-    };
+    const handleLoadedData = () => setIsVideoLoaded(true);
 
     video.addEventListener("loadeddata", handleLoadedData);
     return () => video.removeEventListener("loadeddata", handleLoadedData);
@@ -27,18 +25,22 @@ export function VideoHero() {
           loop
           muted
           playsInline
+          preload="auto"
           className="h-full w-full object-cover"
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          {/* ✅ FIXED PATH */}
+          <source src="/videos/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        
+
         {/* Gradient Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
-        
+
         {/* Optional: Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-blue-900/20 animate-pulse" 
-             style={{ animationDuration: "8s" }} />
+        <div
+          className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-blue-900/20 animate-pulse"
+          style={{ animationDuration: "8s" }}
+        />
       </div>
 
       {/* Hero Content */}
@@ -46,7 +48,10 @@ export function VideoHero() {
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVideoLoaded ? 1 : 0, y: isVideoLoaded ? 0 : 30 }}
+            animate={{
+              opacity: isVideoLoaded ? 1 : 0,
+              y: isVideoLoaded ? 0 : 30,
+            }}
             transition={{ duration: 1, delay: 0.5 }}
             className="text-center"
           >
@@ -56,7 +61,7 @@ export function VideoHero() {
                 Your Brand
               </span>
             </h1>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: isVideoLoaded ? 1 : 0 }}
@@ -68,7 +73,10 @@ export function VideoHero() {
 
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: isVideoLoaded ? 1 : 0, scale: isVideoLoaded ? 1 : 0.8 }}
+              animate={{
+                opacity: isVideoLoaded ? 1 : 0,
+                scale: isVideoLoaded ? 1 : 0.8,
+              }}
               transition={{ duration: 0.6, delay: 1.5 }}
               className="flex flex-col gap-4 sm:flex-row sm:justify-center"
             >
@@ -79,7 +87,7 @@ export function VideoHero() {
                   Get Started
                 </span>
               </button>
-              
+
               <button className="rounded-full border-2 border-white/80 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:scale-105 hover:border-white hover:bg-white/20">
                 Learn More
               </button>
