@@ -3,33 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Lush Engineering | Electrical & Construction Engineering in Botswana</title>
   <meta name="description" content="Lush Engineering Proprietary Limited provides electrical, construction, civil, mechanical and security systems services in Botswana. Call or WhatsApp for a quote." />
-  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="icon" href="assets/img/favicon.svg" />
   <meta property="og:title" content="Lush Engineering | Electrical & Construction Engineering in Botswana" />
   <meta property="og:description" content="Lush Engineering Proprietary Limited provides electrical, construction, civil, mechanical and security systems services in Botswana. Call or WhatsApp for a quote." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta property="og:image" content="assets/img/hero.jpg" />
   <meta name="theme-color" content="#0b1220">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          keyframes: {
-            fadeUp: {
-              '0%': { opacity: '0', transform: 'translateY(14px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            }
-          }
-        }
-      }
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Enhanced badge styling for better visibility */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.25rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.95) 0%, rgba(251, 191, 36, 0.95) 100%);
+      border: 2px solid rgba(250, 204, 21, 0.6);
+      color: #0b1220;
+      font-weight: 800;
+      font-size: 0.875rem;
+      letter-spacing: 0.025em;
+      box-shadow: 0 4px 14px rgba(250, 204, 21, 0.35), 0 2px 8px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      animation: fadeUp 0.7s ease forwards;
+      animation-delay: 80ms;
     }
-  </script>
+  </style>
 </head>
 <body class="bg-white text-slate-900">
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[9999] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-xl focus:shadow-lg">Skip to content</a>
 
+  <!-- Top Bar -->
   <div class="bg-slate-950 text-white/90 text-sm">
     <div class="max-w-6xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
       <div>📍 Francistown, Botswana</div>
@@ -40,6 +48,7 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <a href="index.html" class="flex items-center gap-3">
@@ -52,6 +61,7 @@
         </span>
       </a>
 
+      <!-- Desktop Navigation -->
       <nav class="hidden md:block" aria-label="Primary">
         <ul class="flex items-center gap-6 font-semibold text-slate-700">
           <li><a class="text-slate-950 underline underline-offset-8" href="index.html">Home</a></li>
@@ -62,6 +72,7 @@
         </ul>
       </nav>
 
+      <!-- CTA Buttons & Mobile Menu -->
       <div class="flex items-center gap-2">
         <a class="hidden sm:inline-flex px-4 py-2 rounded-full bg-yellow-400 text-slate-900 font-extrabold hover:brightness-95" href="tel:+26773108995">Call Us</a>
         <a class="hidden sm:inline-flex px-4 py-2 rounded-full border border-slate-200 font-extrabold hover:bg-slate-50" href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
@@ -69,6 +80,7 @@
       </div>
     </div>
 
+    <!-- Mobile Navigation Panel -->
     <div data-menu-panel class="md:hidden hidden border-t border-slate-200 bg-white">
       <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 font-semibold">
         <a class="py-2" href="index.html">Home</a>
@@ -81,35 +93,48 @@
   </header>
 
   <main id="main">
-    <section class="relative">
-      <div class="absolute inset-0">
-        <img src="assets/img/hero.jpg" alt="Lush Engineering hero" class="w-full h-full object-cover" width="1600" height="900" fetchpriority="high" decoding="async" />
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/65 to-slate-950/40"></div>
-      </div>
-
-      <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
-        <div class="max-w-2xl">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-200 font-extrabold text-sm opacity-0 translate-y-3 animate-[fadeUp_.7s_ease_forwards] [animation-delay:80ms]">
-            ✅ Quality • Safety • On-Time Delivery
-          </span>
-
-          <h1 class="mt-4 text-4xl md:text-5xl font-black text-white leading-tight opacity-0 translate-y-3 animate-[fadeUp_.7s_ease_forwards] [animation-delay:160ms]">
-            Reliable Electrical & Construction Engineering Solutions in Botswana
-          </h1>
-
-          <p class="mt-4 text-white/85 text-lg opacity-0 translate-y-3 animate-[fadeUp_.7s_ease_forwards] [animation-delay:240ms]">
-            Electrical, civil, mechanical and security systems services delivered with professional workmanship and strong safety compliance.
+  
+    <!-- Hero Section with Slider -->
+    <section class="hero max-w-6xl mx-auto px-4">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="badge">Civil • Structural • Project Management</p>
+          <h1>Engineering solutions you can <span class="text-accent">trust</span>.</h1>
+          <p class="muted">
+            Lush Engineering delivers high-quality construction and engineering services with safety, precision, and reliability.
           </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+            <a class="btn" href="projects.html">View Projects</a>
+          </div>
+        </div>
 
-          <div class="mt-6 flex flex-wrap gap-3 opacity-0 translate-y-3 animate-[fadeUp_.7s_ease_forwards] [animation-delay:320ms]">
-            <a class="px-5 py-3 rounded-full bg-yellow-400 text-slate-900 font-extrabold hover:brightness-95" href="contact.html">Request a Quote</a>
-            <a class="px-5 py-3 rounded-full border border-white/20 text-white font-extrabold hover:bg-white/10" href="services.html">View Services</a>
-            <a class="px-5 py-3 rounded-full border border-white/20 text-white font-extrabold hover:bg-white/10" href="https://wa.me/26773108995" target="_blank" rel="noopener">WhatsApp</a>
+        <div class="hero-media reveal">
+          <div class="hero-slider" data-slider>
+            <div class="slides">
+              <!-- Slide 1: Video -->
+              <div class="slide is-active">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+                  poster="assets/img/lush-hero-cover.webp">
+                  <source src="assets/videos/hero.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <!-- Slide 2: Image -->
+              <div class="slide">
+                <img src="assets/img/lush-hero-cover.webp" alt="Lush Engineering company profile cover" loading="lazy" />
+              </div>
+            </div>
+
+            <button class="nav prev" type="button" data-prev aria-label="Previous slide">‹</button>
+            <button class="nav next" type="button" data-next aria-label="Next slide">›</button>
+            <div class="dots" data-dots></div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Services Section -->
     <section class="py-14">
       <div class="max-w-6xl mx-auto px-4">
         <div class="flex flex-wrap items-end justify-between gap-3">
@@ -121,17 +146,17 @@
         </div>
 
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow">
             <div class="text-2xl">⚡</div>
             <h3 class="mt-3 font-extrabold">Electrical Engineering</h3>
             <p class="mt-2 text-slate-600">Installations, high voltage reticulation, and reliable power solutions.</p>
           </div>
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow">
             <div class="text-2xl">🏗️</div>
             <h3 class="mt-3 font-extrabold">Construction & Civil Works</h3>
             <p class="mt-2 text-slate-600">Building construction, civil works, and pre-fabricated buildings.</p>
           </div>
-          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow">
             <div class="text-2xl">📷</div>
             <h3 class="mt-3 font-extrabold">Security Systems</h3>
             <p class="mt-2 text-slate-600">CCTV, access control and alarms installation.</p>
@@ -140,6 +165,7 @@
       </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="py-14 bg-slate-50 border-y border-slate-200">
       <div class="max-w-6xl mx-auto px-4">
         <div class="p-7 rounded-2xl bg-white border border-slate-200 flex flex-wrap items-center justify-between gap-4 shadow-sm">
@@ -156,6 +182,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-slate-950 text-white/85 py-10">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
       <div>
@@ -196,6 +223,24 @@
     </div>
   </footer>
 
+  <!-- Company Profile Modal (MUST be BEFORE main.js) -->
+  <div class="profile-modal is-hidden" data-profile-modal aria-hidden="true">
+    <div class="profile-backdrop" data-close-profile></div>
+
+    <div class="profile-panel" role="dialog" aria-modal="true" aria-label="Company Profile">
+      <div class="profile-shadow" aria-hidden="true"></div>
+
+      <div class="profile-top">
+        <div class="profile-title">Company Profile</div>
+        <button class="profile-close" type="button" data-close-profile aria-label="Close">✕</button>
+      </div>
+
+      <iframe class="profile-frame" src="assets/lush-engineering-profile.pdf"
+        title="Lush Engineering Company Profile"></iframe>
+    </div>
+  </div>
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -212,6 +257,7 @@
   }
   </script>
 
+  <!-- Main JavaScript -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
