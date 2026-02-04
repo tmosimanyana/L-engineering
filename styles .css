@@ -121,21 +121,36 @@ button {
   z-index: 10;
 }
 
+
+/*
+ * Brand icon container
+ * Restore rotation on the logo while keeping the enlarged size for readability. The
+ * container width remains wide so the full company name and tagline remain legible.
+ */
 .brand-icon {
-  width: 48px;
-  height: 48px;
+  width: 220px;
+  height: auto;
   color: var(--color-primary);
-  animation: rotate 20s linear infinite;
 }
 
 /* Ensure the logo image scales properly within the brand icon container */
 /* Ensure the logo image scales properly within the brand icon container */
+/* Ensure the logo image scales properly within the brand icon container */
 .brand-icon img {
+  /* Scale logo image proportionally within the resized container */
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  /* Invert dark logos to appear light on dark backgrounds */
-  filter: brightness(0) invert(1);
+  object-fit: contain;
+  /* Remove invert filter because we now use a coloured PNG logo */
+  filter: none;
+  /* Rotate the logo gently like the original design */
+  animation: rotate 20s linear infinite;
+}
+/* Hide the old text next to the logo since the new image includes the wording */
+/* Hide the old text next to the logo since the new image includes the wording */
+.brand-texts {
+  display: none !important;
 }
 
 @keyframes rotate {
@@ -237,26 +252,35 @@ button {
   overflow: hidden;
 }
 
+/* Hero background: use a high‑resolution photograph and gently zoom to add visual interest */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: 
-    linear-gradient(45deg, transparent 30%, rgba(253, 185, 19, 0.05) 50%, transparent 70%),
-    repeating-linear-gradient(
-      90deg,
-      rgba(253, 185, 19, 0.03) 0px,
-      transparent 1px,
-      transparent 40px,
-      rgba(253, 185, 19, 0.03) 41px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(253, 185, 19, 0.03) 0px,
-      transparent 1px,
-      transparent 40px,
-      rgba(253, 185, 19, 0.03) 41px
-    );
-  animation: gridMove 20s linear infinite;
+  overflow: hidden;
+}
+
+/* Style the hero background video to fill the entire section */
+.hero-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 30s ease-in-out infinite alternate;
+}
+
+/* Dark overlay atop the video to improve text contrast */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
 @keyframes gridMove {

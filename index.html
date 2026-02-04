@@ -21,12 +21,11 @@
   <nav class="nav container" role="navigation" aria-label="Main navigation">
     <a href="#home" class="brand" aria-label="Lush Engineering - Home">
       <div class="brand-icon">
-        <!-- Use the official company PNG logo for the header. By enlarging the container and
-             relying on CSS, the full wording in the logo is now clearly visible to visitors. -->
-        <img src="images/log.png" alt="Lush Engineering logo" />
+        <!-- Display the PNG logo hosted on GitHub and rotate it gently. By pointing to the
+             repository asset directly, we avoid embedding oversized image files in the repo. -->
+        <img src="https://github.com/tmosimanyana/L-engineering/raw/main/images/logo.png" alt="Lush Engineering logo" />
       </div>
-      <!-- The separate brand texts have been removed because the new logo image already contains
-           the company name and tagline. This prevents duplicate wording and improves readability. -->
+      <!-- No separate brand text: the logo image includes the company name and tagline. -->
     </a>
 
     <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -47,7 +46,15 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <!-- Embed the hero background video. The video autoplays, loops and is muted to
+         avoid distracting audio. Using the raw GitHub URL ensures the video streams
+         without requiring it to be stored in this repository. -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="https://github.com/tmosimanyana/L-engineering/raw/main/videos/Beige%20and%20Orange%20Modern%20Electrical%20LinkedIn%20Background%20Photo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
   <div class="container hero-content">
     <div class="hero-text">
       <div class="hero-badge">ESTABLISHED 2020</div>
