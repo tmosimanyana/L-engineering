@@ -122,22 +122,29 @@ button {
 }
 
 .brand-icon {
-  width: 48px;
-  height: 48px;
+  /* Increase logo container size and remove rotation animation for better readability */
+  width: 220px;
+  height: auto;
   color: var(--color-primary);
-  animation: rotate 20s linear infinite;
+  animation: none;
 }
 
 /* Ensure the logo image scales properly within the brand icon container */
 /* Ensure the logo image scales properly within the brand icon container */
 /* Ensure the logo image scales properly within the brand icon container */
 .brand-icon img {
+  /* Scale logo image proportionally within the resized container */
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   object-fit: contain;
   /* Remove invert filter because we now use a coloured PNG logo */
   filter: none;
+}
+/* Hide the old text next to the logo since the new image includes the wording */
+/* Hide the old text next to the logo since the new image includes the wording */
+.brand-texts {
+  display: none !important;
 }
 
 @keyframes rotate {
