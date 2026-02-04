@@ -137,15 +137,18 @@ button {
 /* Ensure the logo image scales properly within the brand icon container */
 /* Ensure the logo image scales properly within the brand icon container */
 .brand-icon img {
-  /* Scale logo image proportionally within the resized container */
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
-  /* Remove invert filter because we now use a coloured PNG logo */
   filter: none;
-  /* Rotate the logo gently like the original design */
-  animation: rotate 20s linear infinite;
+  transform-origin: center;
+  transition: transform 800ms ease;
+}
+
+/* Rotate only on hover so the text stays readable */
+.brand:hover .brand-icon img {
+  transform: rotate(360deg);
 }
 /* Hide the old text next to the logo since the new image includes the wording */
 /* Hide the old text next to the logo since the new image includes the wording */
@@ -156,12 +159,6 @@ button {
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-.brand-texts {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
 }
 
 .brand-name {
@@ -1227,6 +1224,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  .brand-icon { width: 150px; }
+  .nav { padding: 0.75rem 1rem; }
+
   /* Navigation */
   .menu-btn {
     display: flex;
@@ -1300,6 +1300,8 @@ button {
 }
 
 @media (max-width: 480px) {
+  .brand-icon { width: 130px; }
+
   .brand-name {
     font-size: 1.25rem;
   }
@@ -1317,4 +1319,13 @@ button {
   .modal-content {
     padding: var(--spacing-lg);
   }
+}
+
+@media (max-width: 768px) {
+  .hero-bg::after { background: rgba(0, 0, 0, 0.65); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg video { animation: none !important; }
+  .brand-icon img { transition: none !important; transform: none !important; }
 }
