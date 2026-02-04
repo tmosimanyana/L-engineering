@@ -129,10 +129,15 @@ button {
 }
 
 /* Ensure the logo image scales properly within the brand icon container */
+/* Ensure the logo image scales properly within the brand icon container */
+/* Ensure the logo image scales properly within the brand icon container */
 .brand-icon img {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: contain;
+  /* Remove invert filter because we now use a coloured PNG logo */
+  filter: none;
 }
 
 @keyframes rotate {
@@ -234,26 +239,22 @@ button {
   overflow: hidden;
 }
 
+/* Hero background: use a high‑resolution photograph and gently zoom to add visual interest */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: 
-    linear-gradient(45deg, transparent 30%, rgba(253, 185, 19, 0.05) 50%, transparent 70%),
-    repeating-linear-gradient(
-      90deg,
-      rgba(253, 185, 19, 0.03) 0px,
-      transparent 1px,
-      transparent 40px,
-      rgba(253, 185, 19, 0.03) 41px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(253, 185, 19, 0.03) 0px,
-      transparent 1px,
-      transparent 40px,
-      rgba(253, 185, 19, 0.03) 41px
-    );
-  animation: gridMove 20s linear infinite;
+  background-image: url('images/transformer.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Add a subtle dark overlay using background blending */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  animation: heroZoom 30s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
 @keyframes gridMove {
