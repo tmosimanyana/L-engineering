@@ -121,12 +121,16 @@ button {
   z-index: 10;
 }
 
+
+/*
+ * Brand icon container
+ * Restore rotation on the logo while keeping the enlarged size for readability. The
+ * container width remains wide so the full company name and tagline remain legible.
+ */
 .brand-icon {
-  /* Increase logo container size and remove rotation animation for better readability */
   width: 220px;
   height: auto;
   color: var(--color-primary);
-  animation: none;
 }
 
 /* Ensure the logo image scales properly within the brand icon container */
@@ -140,6 +144,8 @@ button {
   object-fit: contain;
   /* Remove invert filter because we now use a coloured PNG logo */
   filter: none;
+  /* Rotate the logo gently like the original design */
+  animation: rotate 20s linear infinite;
 }
 /* Hide the old text next to the logo since the new image includes the wording */
 /* Hide the old text next to the logo since the new image includes the wording */
@@ -250,13 +256,26 @@ button {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/transformer.jpg');
-  background-size: cover;
-  background-position: center;
-  /* Add a subtle dark overlay using background blending */
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
+  overflow: hidden;
+}
+
+/* Style the hero background video to fill the entire section */
+.hero-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   animation: heroZoom 30s ease-in-out infinite alternate;
+}
+
+/* Dark overlay atop the video to improve text contrast */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 
 @keyframes heroZoom {
