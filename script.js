@@ -13,15 +13,15 @@ function initNavigation() {
   const navLinks = document.getElementById('navLinks');
   const navLinkItems = document.querySelectorAll('.nav-link');
   const header = document.querySelector('.header');
-  
+
   // Mobile menu toggle
   menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('active');
     navLinks.classList.toggle('active');
-    menuBtn.setAttribute('aria-expanded', 
+    menuBtn.setAttribute('aria-expanded',
       menuBtn.classList.contains('active'));
   });
-  
+
   // Close mobile menu when clicking a link
   navLinkItems.forEach(link => {
     link.addEventListener('click', () => {
@@ -30,7 +30,7 @@ function initNavigation() {
       menuBtn.setAttribute('aria-expanded', 'false');
     });
   });
-  
+
   // Close mobile menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
@@ -39,20 +39,20 @@ function initNavigation() {
       menuBtn.setAttribute('aria-expanded', 'false');
     }
   });
-  
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         const headerOffset = 80;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
+
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
@@ -60,25 +60,25 @@ function initNavigation() {
       }
     });
   });
-  
+
   // Header scroll effect
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-    
+
     // Hide header on scroll down, show on scroll up
     if (currentScroll > lastScroll && currentScroll > 200) {
       header.classList.add('hidden');
     } else {
       header.classList.remove('hidden');
     }
-    
+
     lastScroll = currentScroll;
   });
 }
@@ -88,18 +88,18 @@ function initScrollEffects() {
   // Active section highlighting
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link[data-section]');
-  
+
   const observerOptions = {
     root: null,
     rootMargin: '-100px 0px -66%',
     threshold: 0
   };
-  
+
   const observerCallback = (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const sectionId = entry.target.getAttribute('id');
-        
+
         navLinks.forEach(link => {
           link.classList.remove('active');
           if (link.getAttribute('data-section') === sectionId) {
@@ -109,22 +109,22 @@ function initScrollEffects() {
       }
     });
   };
-  
+
   const observer = new IntersectionObserver(observerCallback, observerOptions);
-  
+
   sections.forEach(section => {
     observer.observe(section);
   });
-  
+
   // Animate elements on scroll
   const animateOnScroll = () => {
     const elements = document.querySelectorAll('.service-card, .fact-card, .project-card, .info-item');
-    
+
     elements.forEach((element, index) => {
       const elementTop = element.getBoundingClientRect().top;
       const elementBottom = element.getBoundingClientRect().bottom;
       const windowHeight = window.innerHeight;
-      
+
       if (elementTop < windowHeight * 0.85 && elementBottom > 0) {
         setTimeout(() => {
           element.style.opacity = '1';
@@ -133,14 +133,14 @@ function initScrollEffects() {
       }
     });
   };
-  
+
   // Set initial state
   document.querySelectorAll('.service-card, .fact-card, .project-card, .info-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   });
-  
+
   window.addEventListener('scroll', animateOnScroll);
   animateOnScroll(); // Initial check
 }
@@ -152,8 +152,7 @@ function initServiceModals() {
   const modalBody = document.getElementById('modalBody');
   const modalClose = document.getElementById('modalClose');
   const modalOverlay = document.getElementById('modalOverlay');
-  const modalContactBtn = document.getElementById('modalContactBtn');
-  
+
   const serviceContent = {
     transformer: {
       title: 'Electrical Transformer Repairs',
@@ -171,7 +170,7 @@ function initServiceModals() {
         <p>We ensure your transformers operate at peak efficiency with minimal downtime, using industry-standard procedures and quality materials.</p>
       `
     },
-    rewinding: {
+    'motor-rewinding': {
       title: 'Electrical Motor Rewinding',
       content: `
         <p>Professional motor rewinding services to restore your electrical motors to optimal performance. Our skilled technicians handle motors of all sizes and types.</p>
@@ -251,7 +250,7 @@ function initServiceModals() {
         <p>Reduce downtime and maintenance costs with our proactive maintenance approach and expert technical support.</p>
       `
     },
-    'general-rewinding': {
+    rewinding: {
       title: 'Rewinding Services',
       content: `
         <p>Specialized rewinding services for a wide range of electrical equipment. Our experienced technicians restore equipment to factory specifications or better.</p>
@@ -266,16 +265,33 @@ function initServiceModals() {
         </ul>
         <p>Using premium materials and precise techniques, we deliver rewinding services that meet the highest industry standards.</p>
       `
+    },
+    installation: {
+      title: 'Installation Services',
+      content: `
+        <p>Professional installation services for electrical and mechanical systems. Our certified technicians ensure precise installation with attention to safety and compliance.</p>
+        <p><strong>Installation Services:</strong></p>
+        <ul style="list-style: none; padding-left: 0; margin: 1rem 0;">
+          <li style="margin-bottom: 0.5rem;">▸ Electrical system installation</li>
+          <li style="margin-bottom: 0.5rem;">▸ Motor and pump installation</li>
+          <li style="margin-bottom: 0.5rem;">▸ Control panel setup</li>
+          <li style="margin-bottom: 0.5rem;">▸ HVAC system installation</li>
+          <li style="margin-bottom: 0.5rem;">▸ System commissioning</li>
+          <li style="margin-bottom: 0.5rem;">▸ Post-installation testing</li>
+        </ul>
+        <p>We ensure all installations meet industry standards and provide long-term reliability.</p>
+      `
     }
   };
-  
-  // Open modal
-  document.querySelectorAll('.service-learn-more').forEach(button => {
-    button.addEventListener('click', function() {
+
+  // Open modal - using class selector instead of non-existent class
+  document.querySelectorAll('.service-card .btn-link').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
       const serviceCard = this.closest('.service-card');
       const serviceType = serviceCard.getAttribute('data-service');
       const content = serviceContent[serviceType];
-      
+
       if (content) {
         modalTitle.textContent = content.title;
         modalBody.innerHTML = content.content;
@@ -285,27 +301,27 @@ function initServiceModals() {
       }
     });
   });
-  
+
   // Close modal functions
   const closeModal = () => {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   };
-  
-  modalClose.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', closeModal);
-  
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', closeModal);
+  }
+
   // Close modal on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
     }
-  });
-  
-  // Close modal and scroll to contact when clicking contact button
-  modalContactBtn.addEventListener('click', () => {
-    closeModal();
   });
 }
 
@@ -313,13 +329,15 @@ function initServiceModals() {
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const formMsg = document.getElementById('formMsg');
-  
+
+  if (!form) return;
+
   // Form validation
   const validateField = (field) => {
     const errorElement = document.getElementById(`${field.name}Error`);
     let isValid = true;
     let errorMsg = '';
-    
+
     // Check if field is empty
     if (!field.value.trim()) {
       isValid = false;
@@ -334,7 +352,7 @@ function initContactForm() {
             errorMsg = 'Please enter a valid email address';
           }
           break;
-          
+
         case 'phone':
           const phoneRegex = /^[\d\s+()-]+$/;
           if (!phoneRegex.test(field.value) || field.value.replace(/\D/g, '').length < 8) {
@@ -342,14 +360,14 @@ function initContactForm() {
             errorMsg = 'Please enter a valid phone number';
           }
           break;
-          
+
         case 'name':
           if (field.value.trim().length < 2) {
             isValid = false;
             errorMsg = 'Name must be at least 2 characters';
           }
           break;
-          
+
         case 'message':
           if (field.value.trim().length < 10) {
             isValid = false;
@@ -358,20 +376,20 @@ function initContactForm() {
           break;
       }
     }
-    
+
     if (errorElement) {
       errorElement.textContent = errorMsg;
     }
-    
+
     if (!isValid) {
       field.classList.add('error');
     } else {
       field.classList.remove('error');
     }
-    
+
     return isValid;
   };
-  
+
   // Real-time validation on blur
   const formFields = form.querySelectorAll('input, select, textarea');
   formFields.forEach(field => {
@@ -380,7 +398,7 @@ function initContactForm() {
         validateField(field);
       }
     });
-    
+
     // Clear error on input
     field.addEventListener('input', () => {
       const errorElement = document.getElementById(`${field.name}Error`);
@@ -390,11 +408,11 @@ function initContactForm() {
       field.classList.remove('error');
     });
   });
-  
+
   // Form submission
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // Validate all fields
     let isFormValid = true;
     formFields.forEach(field => {
@@ -402,13 +420,13 @@ function initContactForm() {
         isFormValid = false;
       }
     });
-    
+
     if (!isFormValid) {
       formMsg.textContent = 'Please correct the errors above';
       formMsg.className = 'form-status error';
       return;
     }
-    
+
     // Collect form data
     const formData = {
       name: form.name.value.trim(),
@@ -418,7 +436,7 @@ function initContactForm() {
       message: form.message.value.trim(),
       timestamp: new Date().toISOString()
     };
-    
+
     // Log to console (in production, this would be sent to a server)
     console.log('Form Submission:', formData);
     console.log('-----------------------------------');
@@ -429,14 +447,14 @@ function initContactForm() {
     console.log('Message:', formData.message);
     console.log('Submitted at:', formData.timestamp);
     console.log('-----------------------------------');
-    
+
     // Show success message
     formMsg.textContent = 'Thank you for your message! We will contact you soon.';
     formMsg.className = 'form-status success';
-    
+
     // Reset form
     form.reset();
-    
+
     // Clear success message after 5 seconds
     setTimeout(() => {
       formMsg.textContent = '';
