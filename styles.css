@@ -136,19 +136,15 @@ button {
 /* Ensure the logo image scales properly within the brand icon container */
 /* Ensure the logo image scales properly within the brand icon container */
 /* Ensure the logo image scales properly within the brand icon container */
-.brand-icon img {
+ .brand-icon img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
   filter: none;
   transform-origin: center;
-  transition: transform 800ms ease;
-}
-
-/* Rotate only on hover so the text stays readable */
-.brand:hover .brand-icon img {
-  transform: rotate(360deg);
+  animation: rotate 20s linear infinite;
+  will-change: transform;
 }
 /* Hide the old text next to the logo since the new image includes the wording */
 /* Hide the old text next to the logo since the new image includes the wording */
@@ -1327,5 +1323,5 @@ button {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-bg video { animation: none !important; }
-  .brand-icon img { transition: none !important; transform: none !important; }
+  .brand-icon img { animation: none !important; transform: none !important; }
 }
