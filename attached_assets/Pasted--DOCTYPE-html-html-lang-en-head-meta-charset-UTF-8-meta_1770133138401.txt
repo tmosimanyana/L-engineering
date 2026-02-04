@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lush Engineering Proprietary Limited</title>
+  <meta name="description" content="Lush Engineering – Your Expects in Electrical Engineering. Electrical, mechanical, rewinding and maintenance services in Botswana."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body id="home">
+
+<!-- ================= NAVBAR ================= -->
+<header class="header">
+  <nav class="nav container">
+    <a href="#home" class="brand">
+      <img src="logo.svg" alt="Lush Engineering Logo" class="brand-logo"/>
+      <div class="brand-texts">
+        <span class="brand-name">Lush Engineering</span>
+        <span class="brand-tagline">Your Expects in Electrical Engineering</span>
+      </div>
+    </a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Reliable Electrical & Mechanical Engineering Solutions</h1>
+      <p>
+        Lush Engineering Proprietary Limited delivers professional repairs,
+        rewinding, maintenance, and engineering services across Botswana.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary">Request a Quote</a>
+        <a href="#services" class="btn secondary">View Services</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Company Details</h3>
+      <ul>
+        <li><strong>UIN:</strong> BW00002121805</li>
+        <li><strong>Established:</strong> 07 July 2020</li>
+        <li><strong>Location:</strong> Francistown, Botswana</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      Lush Engineering Proprietary Limited is a Botswana-based engineering company
+      specialising in electrical and mechanical repairs, motor rewinding,
+      transformer servicing, heavy-duty pump repairs, and ongoing maintenance.
+      We are committed to quality workmanship, safety, and reliable service delivery.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section dark">
+  <div class="container">
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+      <div class="service-card">Electrical Transformer Repairs</div>
+      <div class="service-card">Electrical Motor Rewinding</div>
+      <div class="service-card">Electrical Repairs</div>
+      <div class="service-card">Heavy Duty Pump Repairs</div>
+      <div class="service-card">Motor Repairs</div>
+      <div class="service-card">Repairs & Maintenance</div>
+      <div class="service-card">Rewinding</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLIANCE ================= -->
+<section id="compliance" class="section">
+  <div class="container">
+    <h2>Registration & Compliance</h2>
+    <p>
+      Lush Engineering is a <strong>Registered Contractor</strong> in Botswana.
+    </p>
+    <ul>
+      <li>Contractor Status: Active</li>
+      <li>Registration Valid Until: <strong>20 November 2026</strong></li>
+      <li>Approved Engineering & Maintenance Works</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section dark">
+  <div class="container">
+    <h2>Contact Us</h2>
+
+    <div class="contact-grid">
+      <div>
+        <p><strong>Phone:</strong> +267 74689754</p>
+        <p><strong>Email:</strong> lushengineering20@gmail.com</p>
+        <p><strong>Location:</strong> Plot 8555, Kgaphamadi, Francistown</p>
+      </div>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="formMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> Lush Engineering Proprietary Limited. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

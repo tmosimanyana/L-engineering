@@ -1,0 +1,49 @@
+Build a modern, responsive company profile website for:
+
+Company: Lush Engineering Proprietary Limited
+UIN: BW00002121805
+Incorporated: 07 July 2020
+Location: Plot 8555, Kgaphamadi, Francistown, Botswana
+Phone: +267 74689754
+Email: lushengineering20@gmail.com
+
+The site must be built ONLY with:
+- index.html
+- styles.css
+- script.js
+(No frameworks.)
+
+Style: clean engineering look, professional, mobile-first, smooth animations, accessible contrast, modern typography, sticky navbar, responsive layout.
+
+Pages/Sections (single-page scroll):
+1) Hero (headline + short tagline + CTA buttons: “Request a Quote” and “View Services”)
+2) About (company summary + key facts cards: UIN, incorporation date, location)
+3) Services (use this exact list and display as cards with icons):
+   - Electrical Transformer Repairs
+   - Electrical Motor Rewinding
+   - Electrical Repairs
+   - Heavy duty pump repairs
+   - Motor Repairs
+   - Repairs And Maintenance
+   - Rewinding
+   Add a “Learn more” modal popup per service (JS) with placeholder text that I can edit later.
+4) Registrations / Compliance (show “Registered Contractor” + expiry date 20/11/2026 and a bullet list of approved disciplines/capabilities such as: Electrical installations, High voltage reticulation, Fire detection systems, Automated machinery & control systems, Security systems (CCTV/access control/alarms), Photovoltaic systems, Airfield lighting, Civil works (Road surfacing), Mechanical works (Air conditioning/refrigeration, LPG installations, Low pressure water systems, Steam/boiler, Compressed air equipment, General fabrication & machine shop, Pumps & munchers, Fire suppression, Lifts/hoists/escalators), Fencing works, Railway signalling, etc.
+5) Projects / Gallery (grid of placeholder images/cards; use local placeholders and captions)
+6) Contact (contact cards + a working contact form with frontend validation:
+   name, email, phone, service dropdown, message.
+   On submit: prevent default and show a success message; also log the form data to console.)
+
+Navigation:
+- Sticky top nav with logo text “Lush Engineering”
+- Smooth scroll to sections
+- Active section highlighting in nav while scrolling
+- Mobile hamburger menu
+
+Footer:
+- Company name, phone, email, location, and “© year” auto-updated with JS.
+
+Deliverables:
+- Provide complete code for index.html, styles.css, script.js
+- Use CSS variables for theme colors
+- Use semantic HTML and ARIA labels for accessibility
+- Ensure it looks good on phones and desktops

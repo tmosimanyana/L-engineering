@@ -27,32 +27,48 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
-  --font-family-sans: 'Inter', system-ui, sans-serif;
-  --font-family-display: 'Oswald', sans-serif;
 }
 
 :root {
+  /* Slate 900 */
   --background: 222 47% 11%;
   --foreground: 210 40% 98%;
+
+  /* Slate 800 */
   --card: 217 33% 17%;
   --card-foreground: 210 40% 98%;
+
+  /* Slate 800 */
   --popover: 217 33% 17%;
   --popover-foreground: 210 40% 98%;
+
+  /* Amber 400 - #fbbf24 */
   --primary: 45 93% 47%;
   --primary-foreground: 222 47% 11%;
+
+  /* Slate 700 */
   --secondary: 215 25% 27%;
   --secondary-foreground: 210 40% 98%;
+
+  /* Slate 600 */
   --muted: 215 16% 47%;
   --muted-foreground: 215 20% 65%;
+
+  /* Amber 400 */
   --accent: 45 93% 47%;
   --accent-foreground: 222 47% 11%;
+
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
+
   --border: 217 33% 17%;
   --input: 217 33% 17%;
   --ring: 45 93% 47%;
+
   --radius: 0.5rem;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Oswald', sans-serif;
 }
 
 @layer base {
@@ -60,11 +76,9 @@
     @apply border-border;
   }
   body {
-    @apply antialiased bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    @apply tracking-wide uppercase;
+    @apply font-display tracking-wide uppercase;
   }
 }

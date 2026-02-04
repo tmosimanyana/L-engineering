@@ -1,0 +1,167 @@
+:root{
+  --dark:#0f172a;
+  --light:#ffffff;
+  --accent:#fbbf24;
+  --muted:#9ca3af;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.6;
+  color:#111;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 1rem;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+  z-index:100;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.75rem 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+  text-decoration:none;
+  color:#111;
+}
+
+.brand-logo{
+  width:48px;
+  height:48px;
+}
+
+.brand-name{
+  font-weight:800;
+  font-size:1.1rem;
+}
+
+.brand-tagline{
+  font-size:0.8rem;
+  color:var(--muted);
+}
+
+.menu-btn{
+  display:none;
+  font-size:1.5rem;
+  background:none;
+  border:none;
+}
+
+.nav-links a{
+  margin-left:1rem;
+  text-decoration:none;
+  color:#111;
+  font-weight:600;
+}
+
+.hero{
+  padding:4rem 0;
+  background:#f9fafb;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:2rem;
+}
+
+.hero-buttons{
+  margin-top:1.5rem;
+}
+
+.btn{
+  padding:0.7rem 1.2rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:700;
+  display:inline-block;
+}
+
+.primary{
+  background:var(--accent);
+  color:#000;
+}
+
+.secondary{
+  border:2px solid var(--accent);
+  color:#000;
+}
+
+.hero-card{
+  background:#fff;
+  padding:1.5rem;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
+}
+
+.section{
+  padding:3rem 0;
+}
+
+.section.dark{
+  background:var(--dark);
+  color:#fff;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+  margin-top:1.5rem;
+}
+
+.service-card{
+  background:#1e293b;
+  padding:1.2rem;
+  border-radius:6px;
+  text-align:center;
+  font-weight:700;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+
+form input, form textarea{
+  width:100%;
+  padding:0.75rem;
+  margin-bottom:0.75rem;
+  border-radius:6px;
+  border:none;
+}
+
+.footer{
+  text-align:center;
+  padding:1rem;
+  background:#111827;
+  color:#fff;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .hero-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+  .menu-btn{display:block;}
+  .nav-links{display:none;}
+}
