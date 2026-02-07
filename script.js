@@ -49,7 +49,7 @@ function initNavigation() {
       
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        const headerOffset = 80;
+        const headerOffset = 70;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         
@@ -170,7 +170,7 @@ function initServiceModals() {
         <p>We ensure your transformers operate at peak efficiency with minimal downtime, using industry-standard procedures and quality materials.</p>
       `
     },
-    'motor-rewinding': {
+    rewinding: {
       title: 'Electrical Motor Rewinding',
       content: `
         <p>Professional motor rewinding services to restore your electrical motors to optimal performance. Our skilled technicians handle motors of all sizes and types.</p>
@@ -250,7 +250,7 @@ function initServiceModals() {
         <p>Reduce downtime and maintenance costs with our proactive maintenance approach and expert technical support.</p>
       `
     },
-    rewinding: {
+    'general-rewinding': {
       title: 'Rewinding Services',
       content: `
         <p>Specialized rewinding services for a wide range of electrical equipment. Our experienced technicians restore equipment to factory specifications or better.</p>
@@ -265,27 +265,11 @@ function initServiceModals() {
         </ul>
         <p>Using premium materials and precise techniques, we deliver rewinding services that meet the highest industry standards.</p>
       `
-    },
-    installation: {
-      title: 'Installation Services',
-      content: `
-        <p>Professional installation services for electrical and mechanical systems. Our certified technicians ensure precise installation with attention to safety and compliance.</p>
-        <p><strong>Installation Services:</strong></p>
-        <ul style="list-style: none; padding-left: 0; margin: 1rem 0;">
-          <li style="margin-bottom: 0.5rem;">▸ Electrical system installation</li>
-          <li style="margin-bottom: 0.5rem;">▸ Motor and pump installation</li>
-          <li style="margin-bottom: 0.5rem;">▸ Control panel setup</li>
-          <li style="margin-bottom: 0.5rem;">▸ HVAC system installation</li>
-          <li style="margin-bottom: 0.5rem;">▸ System commissioning</li>
-          <li style="margin-bottom: 0.5rem;">▸ Post-installation testing</li>
-        </ul>
-        <p>We ensure all installations meet industry standards and provide long-term reliability.</p>
-      `
     }
   };
   
-  // Open modal - using class selector instead of non-existent class
-  document.querySelectorAll('.service-card .btn-link').forEach(button => {
+  // Open modal - using service-learn-more button selector
+  document.querySelectorAll('.service-learn-more').forEach(button => {
     button.addEventListener('click', function(e) {
       e.preventDefault();
       const serviceCard = this.closest('.service-card');
@@ -505,4 +489,4 @@ window.addEventListener('scroll', optimizedScroll);
 
 // Log initialization
 console.log('Lush Engineering website initialized successfully');
-console.log('For support, contact: lushengineering20@gmail.com');
+console.log('For support, contact: lushengineering1@gmail.com');

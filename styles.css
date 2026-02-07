@@ -11,7 +11,7 @@
   --color-gray-light: #CBD5E1;
   --color-success: #10B981;
   --color-error: #EF4444;
-
+  
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -20,18 +20,18 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
-
+  
   /* Typography */
   --font-display: 'Bebas Neue', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-
+  
   /* Effects */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
   --shadow-glow: 0 0 40px rgba(253, 185, 19, 0.3);
-
+  
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 300ms ease;
@@ -39,9 +39,7 @@
 }
 
 /* ==================== RESET & BASE ==================== */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -110,7 +108,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-sm) var(--spacing-md);
+  height: 70px;
+  padding: 0 var(--spacing-md);
   position: relative;
 }
 
@@ -129,8 +128,8 @@ button {
  * Responsive logo sizing that adapts to screen size with circular shape
  */
 .brand-icon {
-  width: clamp(140px, 30vw, 220px);
-  height: clamp(140px, 30vw, 220px);
+  width: clamp(50px, 15vw, 60px);
+  height: clamp(50px, 15vw, 60px);
   color: var(--color-primary);
   border-radius: 50%;
   overflow: hidden;
@@ -162,14 +161,11 @@ button {
 
 /* Subtle pulse animation for the logo */
 @keyframes logoPulse {
-
-  0%,
-  100% {
+  0%, 100% { 
     transform: scale(1);
     box-shadow: 0 0 20px rgba(253, 185, 19, 0.2);
   }
-
-  50% {
+  50% { 
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(253, 185, 19, 0.4);
   }
@@ -264,7 +260,7 @@ button {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: calc(80px + var(--spacing-xl)) var(--spacing-md) var(--spacing-3xl);
+  padding: calc(70px + var(--spacing-xl)) var(--spacing-md) var(--spacing-3xl);
   background: var(--color-dark);
   overflow: hidden;
 }
@@ -296,23 +292,13 @@ button {
 }
 
 @keyframes heroZoom {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.1);
-  }
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
 }
 
 @keyframes gridMove {
-  from {
-    transform: translate(0, 0);
-  }
-
-  to {
-    transform: translate(40px, 40px);
-  }
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, 40px); }
 }
 
 .hero-content {
@@ -355,21 +341,10 @@ button {
   animation: fadeInUp 1s ease-out both;
 }
 
-.hero-line:nth-child(1) {
-  animation-delay: 0.3s;
-}
-
-.hero-line:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.hero-line:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.hero-line:nth-child(4) {
-  animation-delay: 0.6s;
-}
+.hero-line:nth-child(1) { animation-delay: 0.3s; }
+.hero-line:nth-child(2) { animation-delay: 0.4s; }
+.hero-line:nth-child(3) { animation-delay: 0.5s; }
+.hero-line:nth-child(4) { animation-delay: 0.6s; }
 
 .hero-accent {
   color: var(--color-primary);
@@ -431,7 +406,6 @@ button {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -516,13 +490,8 @@ button {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .scroll-line {
@@ -533,17 +502,8 @@ button {
 }
 
 @keyframes scrollLine {
-
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(20px); opacity: 0; }
 }
 
 /* ==================== BUTTONS ==================== */
@@ -998,7 +958,7 @@ button {
   letter-spacing: 0.05em;
 }
 
-.contact-info>p {
+.contact-info > p {
   color: var(--color-gray-light);
   margin-bottom: var(--spacing-xl);
   line-height: 1.8;
@@ -1232,7 +1192,6 @@ button {
     opacity: 0;
     transform: translateY(-20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1283,25 +1242,24 @@ button {
   .hero-content {
     grid-template-columns: 1fr;
   }
-
+  
   .hero-card {
     order: -1;
   }
 }
 
 @media (max-width: 768px) {
-
   /* Logo adjustments for tablets */
   .brand-icon {
-    width: clamp(120px, 25vw, 180px);
-    height: clamp(120px, 25vw, 180px);
+    width: clamp(45px, 12vw, 55px);
+    height: clamp(45px, 12vw, 55px);
   }
-
+  
   /* Navigation */
   .menu-btn {
     display: flex;
   }
-
+  
   .nav-links {
     position: fixed;
     top: 0;
@@ -1316,53 +1274,53 @@ button {
     box-shadow: var(--shadow-xl);
     border-left: 2px solid var(--color-dark);
   }
-
+  
   .nav-links.active {
     transform: translateX(0);
   }
-
+  
   /* Hero */
   .hero {
     min-height: auto;
-    padding: calc(80px + var(--spacing-xl)) var(--spacing-md) var(--spacing-2xl);
+    padding: calc(70px + var(--spacing-xl)) var(--spacing-md) var(--spacing-2xl);
   }
-
+  
   .hero-title {
     font-size: clamp(2.5rem, 10vw, 4rem);
   }
-
+  
   .hero-buttons {
     flex-direction: column;
   }
-
+  
   .hero-stats {
     flex-wrap: wrap;
   }
-
+  
   /* Sections */
   .section {
     padding: var(--spacing-2xl) 0;
   }
-
+  
   .section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-sm);
   }
-
+  
   .section-number {
     font-size: 3rem;
   }
-
+  
   /* Contact */
   .contact-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .form-row {
     grid-template-columns: 1fr;
   }
-
+  
   /* Footer */
   .footer-content {
     grid-template-columns: 1fr;
@@ -1370,41 +1328,40 @@ button {
 }
 
 @media (max-width: 480px) {
-
   /* Logo adjustments for mobile phones */
   .brand-icon {
-    width: clamp(100px, 35vw, 140px);
-    height: clamp(100px, 35vw, 140px);
+    width: clamp(40px, 15vw, 50px);
+    height: clamp(40px, 15vw, 50px);
   }
-
+  
   /* Reduce padding on mobile */
   .nav {
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
   }
-
+  
   .brand-name {
     font-size: 1.25rem;
   }
-
+  
   .hero-badge {
     font-size: 0.65rem;
     padding: 0.375rem 0.75rem;
   }
-
+  
   .services-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .modal-content {
     padding: var(--spacing-lg);
   }
-
+  
   /* Reduce spacing on very small screens */
   .hero {
-    padding: calc(60px + var(--spacing-md)) var(--spacing-sm) var(--spacing-lg);
+    padding: calc(70px + var(--spacing-md)) var(--spacing-sm) var(--spacing-lg);
   }
-
+  
   /* Make buttons stack better on small screens */
   .btn {
     padding: 0.75rem 1.25rem;
@@ -1415,11 +1372,11 @@ button {
 /* Extra small devices (very small phones) */
 @media (max-width: 360px) {
   .brand-icon {
-    width: clamp(80px, 40vw, 120px);
-    height: clamp(80px, 40vw, 120px);
+    width: clamp(35px, 18vw, 45px);
+    height: clamp(35px, 18vw, 45px);
   }
-
+  
   .nav {
-    padding: var(--spacing-xs);
+    padding: 0 var(--spacing-xs);
   }
 }
