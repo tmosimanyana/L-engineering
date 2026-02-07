@@ -126,25 +126,33 @@ button {
 
 /*
  * Brand icon container
- * Responsive logo sizing that adapts to screen size
+ * Responsive logo sizing that adapts to screen size with circular shape
  */
 .brand-icon {
   width: clamp(140px, 30vw, 220px);
-  height: auto;
+  height: clamp(140px, 30vw, 220px);
   color: var(--color-primary);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(253, 185, 19, 0.1), rgba(253, 185, 19, 0.05));
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 20px rgba(253, 185, 19, 0.2);
+  animation: logoPulse 3s ease-in-out infinite;
 }
 
 /* Ensure the logo image scales properly within the brand icon container */
 .brand-icon img {
   /* Scale logo image proportionally within the resized container */
-  width: 100%;
-  height: auto;
+  width: 85%;
+  height: 85%;
   display: block;
   object-fit: contain;
   /* Remove invert filter because we now use a coloured PNG logo */
   filter: none;
-  /* Rotate the logo gently like the original design */
-  animation: rotate 20s linear infinite;
+  /* No rotation - just static logo */
 }
 
 /* Hide the old text next to the logo since the new image includes the wording */
@@ -152,13 +160,18 @@ button {
   display: none !important;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+/* Subtle pulse animation for the logo */
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(253, 185, 19, 0.2);
   }
 
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(253, 185, 19, 0.4);
   }
 }
 
@@ -1149,9 +1162,18 @@ button {
 }
 
 .footer-brand .brand-icon {
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   animation: none;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 10px rgba(253, 185, 19, 0.15);
+}
+
+.footer-brand .brand-icon img {
+  width: 75%;
+  height: 75%;
 }
 
 .footer-brand span {
@@ -1272,6 +1294,7 @@ button {
   /* Logo adjustments for tablets */
   .brand-icon {
     width: clamp(120px, 25vw, 180px);
+    height: clamp(120px, 25vw, 180px);
   }
 
   /* Navigation */
@@ -1351,6 +1374,7 @@ button {
   /* Logo adjustments for mobile phones */
   .brand-icon {
     width: clamp(100px, 35vw, 140px);
+    height: clamp(100px, 35vw, 140px);
   }
 
   /* Reduce padding on mobile */
@@ -1392,6 +1416,7 @@ button {
 @media (max-width: 360px) {
   .brand-icon {
     width: clamp(80px, 40vw, 120px);
+    height: clamp(80px, 40vw, 120px);
   }
 
   .nav {
